@@ -1,0 +1,16 @@
+.essentials {
+    background-image: url(../images/back22.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2vw;
+    background-size: cover;
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 30vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
