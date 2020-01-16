@@ -3942,9 +3942,6 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
     }
 }
 
-
-/* Circle */
-
 nav#sidebar-nav ul li a {
     position: relative;
     overflow: hidden;
@@ -3965,6 +3962,9 @@ nav#sidebar-nav .moreitem ul li a {
     z-index: 1;
     height: 28vh;
 }
+
+
+/* Circle */
 
 nav#sidebar-nav ul li a:after {
     display: block;
