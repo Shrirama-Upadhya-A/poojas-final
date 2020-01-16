@@ -171,20 +171,6 @@ body {
     height: 100%;
 }
 
-.img-txt h1 {
-    position: absolute;
-    display: block;
-    top: 50%;
-    color: #fff;
-    width: 100%;
-    padding: 50px 0;
-    font-size: 45px;
-    font-weight: 100;
-    text-align: center;
-    transform: translateY(-50%);
-    background-color: transparent;
-}
-
 
 /************ Start Form Container **************/
 
@@ -244,7 +230,6 @@ input[type="number"] {
 
 .form form lable {
     color: #ac0401;
-    font-size: 16px;
     font-weight: 300;
     margin: 6px 0;
 }
@@ -262,7 +247,7 @@ input[type="number"] {
     color: #ac0401;
     width: 100%;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 200;
     margin-bottom: 25px;
     padding: 5px 0 10px 0;
