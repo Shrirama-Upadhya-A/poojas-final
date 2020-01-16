@@ -197,10 +197,14 @@ body {
 
 .top-buttons button:nth-child(1) {
     border-radius: 50px 0 0 50px;
+    border: none;
+    outline: none;
 }
 
 .top-buttons button:nth-child(2) {
     border-radius: 0 50px 50px 0;
+    border: none;
+    outline: none;
 }
 
 .top-active-button {
@@ -366,4 +370,9 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+input[type="button"]:focus {
+    border: none;
+    outline: none;
 }
