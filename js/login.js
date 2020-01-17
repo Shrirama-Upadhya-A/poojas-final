@@ -13,8 +13,8 @@ $(document).ready(function() {
             .addClass("top-active-button")
             .siblings()
             .removeClass("top-active-button");
-        $(".form-signup").slideUp(500);
-        $(".form-signin").slideDown(500);
+        $(".form-signup").slideUp(1600);
+        $(".form-signin").slideDown(1600);
     });
 
     $(".to-signup").on("click", function() {
@@ -22,8 +22,8 @@ $(document).ready(function() {
             .addClass("top-active-button")
             .siblings()
             .removeClass("top-active-button");
-        $(".form-signin").slideUp(500);
-        $(".form-signup").slideDown(500);
+        $(".form-signin").slideUp(1600);
+        $(".form-signup").slideDown(1600);
     });
 
     $(".to-signin-link").on("click", function() {
@@ -31,8 +31,8 @@ $(document).ready(function() {
             .addClass("top-active-button")
             .siblings()
             .removeClass("top-active-button");
-        $(".form-signup").slideUp(200);
-        $(".form-signin").slideDown(200);
+        $(".form-signup").slideUp(500);
+        $(".form-signin").slideDown(500);
     });
 
     $(".to-signup-link").on("click", function() {
@@ -40,8 +40,8 @@ $(document).ready(function() {
             .addClass("top-active-button")
             .siblings()
             .removeClass("top-active-button");
-        $(".form-signin").slideUp(200);
-        $(".form-signup").slideDown(200);
+        $(".form-signin").slideUp(500);
+        $(".form-signup").slideDown(500);
     });
 });
 
