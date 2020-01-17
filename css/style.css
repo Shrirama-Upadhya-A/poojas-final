@@ -1170,3 +1170,24 @@
         -ms-transform: scale(1.05);
         transform: scale(1.05);
     }*/
+    
+     ::-webkit-scrollbar-button {
+        display: none;
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background-color: transparent;
+    }
+    /* background of the scrollbar except button or resizer */
+    
+     ::-webkit-scrollbar-track {
+        background-color: transparent;
+        border: 2px transparent;
+        border-radius: 50px;
+    }
+    
+     ::-webkit-scrollbar {
+        background-color: #ffff;
+        display: none;
+        height: 1px;
+    }
