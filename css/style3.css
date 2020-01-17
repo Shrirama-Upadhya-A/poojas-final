@@ -67,10 +67,6 @@
     font-weight: 300;
 }
 
-.light-bg {
-    background-color: #faf6fb;
-}
-
 .section {
     padding: 25vh 0;
 }
@@ -83,7 +79,7 @@
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     background-color: #FFF;
-    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.4);
     padding: 3rem;
 }
 
@@ -121,6 +117,7 @@
     border-top-width: 5px;
     border-radius: 25px;
     border-bottom-left-radius: 5px;
+    margin-top: -20px;
     border-bottom-right-radius: 0px;
     border-color: #ac0401 #fff #FFF;
     color: #ac0401;
