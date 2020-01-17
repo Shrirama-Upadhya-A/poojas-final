@@ -183,34 +183,9 @@ body {
     text-align: right;
 }
 
-.top-buttons button {
-    color: #cacaca;
-    border: none;
-    width: 90px;
-    margin: -2px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 300;
-    background: #4c5c72;
-    cursor: pointer;
-}
-
-.top-buttons button:nth-child(1) {
-    border-radius: 50px 0 0 50px;
-    border: none;
-    outline: none;
-}
-
-.top-buttons button:nth-child(2) {
-    border-radius: 0 50px 50px 0;
-    border: none;
-    outline: none;
-}
-
-.top-active-button {
-    color: #fff !important;
-    background: linear-gradient(#ac0401, #fd231f) !important;
-    transition: all 0.3s ease;
+.top-buttons img {
+    width: 250px;
+    height: auto !important;
 }
 
 .form {
