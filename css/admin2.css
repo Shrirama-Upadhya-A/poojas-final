@@ -74,7 +74,8 @@ h2 {
 
 .left_col {
     background: #ac0401;
-    height: 100vh
+    min-height: 100vh;
+    max-height: auto;
 }
 
 .menu_section {
@@ -347,7 +348,6 @@ a:hover {
 }
 
 .nav-md ul.nav.child_menu li:before {
-    background: #fff;
     bottom: auto;
     content: "";
     height: 8px;
@@ -430,6 +430,12 @@ a:hover {
 
 .nav.child_menu>li>a {
     color: rgba(255, 255, 255, .75);
+    font-size: 12px;
+    padding: 9px
+}
+
+.nav.child_menu>li>a:hover {
+    color: rgba(255, 255, 255, 0.75);
     font-size: 12px;
     padding: 9px
 }
