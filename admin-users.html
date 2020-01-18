@@ -12,7 +12,13 @@
     <link href="css/admin.css" rel="stylesheet">
     <link href="css/admin2.css" rel="stylesheet">
 
-</head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+
+
 
 <body class="nav-md">
     <div class="container body">
@@ -31,44 +37,30 @@
                     <div class="menu_section">
                         <h3>ADMIN</h3>
                         <ul class="nav side-menu">
-                            <li><a href="admin-users.html"><i class="fa fa-user"></i> Users</a>
+                            <li><a><i class="fa fa-user"></i> Users <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a id = "adminUsers" href="admin-users.html">Users Info</a></li>
 
+                                </ul>
                             </li>
                             <li><a><i class="fa fa-gift"></i> Products <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a><i class="fa fa-gear"></i> Puja Flowers <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li><a href="admin-flowers-daily.html">Daily Subscription</a></li>
-                                            <li><a href="admin-flowers-special.html">Special Flowers</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a><i class="fa fa-bell"></i> Puja Essentials <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li><a href="admin-essentials-utensils.html">Utensils</a></li>
-                                            <li><a href="admin-essentials-samagri.html">Samagri</a></li>
-                                            <li><a href="admin-essentials-poshak.html">Poshak</a></li>
-                                            <li><a href="admin-essentials-mandirs.html">Mandirs</a></li>
-                                            <li><a href="admin-essentials-idols.html">Idols</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li><a><i class="fa fa-hand-paper-o"></i> Puja Pundits <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li><a href="admin-pundit-regular.html">Regular</a></li>
-                                            <li><a href="admin-pundit-recommended.html">Recommended</a></li>
-                                            <li><a href="admin-pundit-anusthans.html">Anusthans</a></li>
-
-                                        </ul>
-                                    </li>
-
+                                    <li><a id = "adminFlowers" href="admin-flowers.html">Puja Flowers</a></li>
+                                    <li><a id = "adminEssentials"  href="admin-essentials.html">Puja Essentials</a></li>
+                                    <li><a id = "adminPundits" href="admin-pundits.html">Puja Pundits</a></li>
 
                                 </ul>
                             </li>
                         </ul>
                     </div>
+
+
                 </div>
                 <!-- /sidebar menu -->
+
+
+
+
             </div>
         </div>
 
@@ -99,56 +91,14 @@
                 </h2>
 
                 <table class="rwd-table">
-                    <tbody>
-                        <tr>
-                            <th>Ref. ID</th>
-                            <th>Name</th>
-                            <th>Phone Number</th>
-                            <th>Email ID</th>
-                            <th>View</th>
-                        </tr>
-                        <tr>
-                            <td data-th="Ref. ID">
-                                abc123
-                            </td>
-                            <td data-th="Name">
-                                Heet
-                            </td>
-                            <td data-th="Phone Number">
-                                9898787867
-                            </td>
-                            <td data-th="Email ID">
-                                heet@gmail.com
-                            </td>
-                            <td data-th="View">
-                                <a href="userpage.html">
-                                    <button type="button" style="width: 5vw;" class="btn btn-danger">
-                                    VIEW</button>
-                                </a>
-                            </td>
-
-                        </tr>
-
-                        <tr>
-                            <td data-th="Ref. ID">
-                                abc123
-                            </td>
-                            <td data-th="Name">
-                                Bhavishya
-                            </td>
-                            <td data-th="Phone Number">
-                                123456789
-                            </td>
-                            <td data-th="Email ID">
-                                bhav@gmail.com
-                            </td>
-                            <td data-th="View">
-                                <button type="button" style="width: 5vw;" class="btn btn-danger">
-                                    VIEW</button>
-                            </td>
-
-                        </tr>
-
+                    <tr>
+                        <th>Ref. ID</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email ID</th>
+                        <th>View</th>
+                    </tr>
+                    <tbody id = "tableBody">
                     </tbody>
                 </table>
             </div>
@@ -166,7 +116,36 @@
 <script src="js/script.js"></script>
 
 <script src="js/admin.js"></script>
-
+<script>
+function myFunction(n,m,id){
+        console.log(n+"::::"+m);
+        var myData = {
+            'name' : n,
+            'email' : m,
+            'id' : id
+        };
+        localStorage.setItem('ObjectToPass',JSON.stringify(myData));
+        window.open("../poojas-final-master/userpage.html","_top");
+    }
+</script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
+        authDomain: "puja-sanskar.firebaseapp.com",
+        databaseURL: "https://puja-sanskar.firebaseio.com",
+        projectId: "puja-sanskar",
+        storageBucket: "puja-sanskar.appspot.com",
+        messagingSenderId: "713940980877",
+        appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
+        measurementId: "G-SFJFNS80VC"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+</script>
+<script src="js/adminUsers.js"></script>
 </body>
-
+</head>
 </html>
