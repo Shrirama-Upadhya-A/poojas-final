@@ -1,0 +1,377 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400, 300, 600, 700);
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+@font-face {
+    font-family: ifont;
+    src: url(SF-Pro-Display-Italic.otf);
+}
+
+@font-face {
+    font-family: bifont;
+    src: url(SF-Pro-Display-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: rfont;
+    src: url(SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+    font-family: bfont;
+    src: url(SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+    font-family: mfont;
+    src: url(SF-Pro-Display-Medium.otf);
+}
+
+@font-face {
+    font-family: lfont;
+    src: url(SF-Pro-Display-Light.otf);
+}
+
+@font-face {
+    font-family: sbfont;
+    src: url(SF-Pro-Display-Semibold.otf);
+}
+
+@font-face {
+    font-family: mifont;
+    src: url(SF-Pro-Display-MediumItalic.otf);
+}
+
+@font-face {
+    font-family: lifont;
+    src: url(SF-Pro-Display-LightItalic.otf);
+}
+
+@font-face {
+    font-family: hindi;
+    src: url(Kruti-Regular.ttf);
+}
+
+body {
+    font-family: rfont;
+}
+
+.modal-content {
+    background-color: #cacaca;
+}
+
+h2 {
+    color: #ac0401;
+    font-family: bfont;
+}
+
+
+/*Body Styling */
+
+.btn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-danger {
+    font-family: bfont;
+    font-size: 13px;
+    color: #ac0401;
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: 2px solid #ac0401;
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-danger:hover {
+    color: #FFF;
+    background: #ac0401;
+    border: 2px solid #ac0401;
+}
+
+.rwd-table {
+    margin: auto;
+    min-width: 90%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+.rwd-table tr:first-child {
+    border-top: none;
+    background: #ac0401;
+    color: #fff;
+}
+
+.rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #f5f9fc;
+}
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+    background-color: #ebf3f9;
+}
+
+.rwd-table th {
+    display: none;
+}
+
+.rwd-table td {
+    display: block;
+}
+
+.rwd-table td:first-child {
+    margin-top: .5em;
+}
+
+.rwd-table td:last-child {
+    margin-bottom: .5em;
+}
+
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+    color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+    text-align: left;
+}
+
+.rwd-table {
+    color: #333;
+    border-radius: .4em;
+    overflow: hidden;
+}
+
+.rwd-table tr {
+    border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+    padding: .5em 1em;
+}
+
+@media screen and (max-width: 601px) {
+    .rwd-table tr:nth-child(2) {
+        border-top: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .rwd-table tr:hover:not(:first-child) {
+        background-color: #d8e7f3;
+    }
+    .rwd-table td:before {
+        display: none;
+    }
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+        padding-left: 0;
+    }
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+        padding-right: 0;
+    }
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
+}
+
+
+/* Profile container */
+
+.profile {
+    margin: 20px 0;
+}
+
+
+/* Profile sidebar */
+
+.profile-sidebar {
+    padding: 20px 0 0px 0;
+    background: #fff;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-logo img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-id {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-mail,
+.profile-usertitle-number {
+    color: #ac0401;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #ac0401;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #ac0401;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #ac0401;
+    background-color: #f6f9fb;
+    border-left: 2px solid #ac0401;
+    margin-left: -2px;
+}
+
+
+/* Profile Content */
+
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+.portlet {
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.portlet.bordered {
+    border-left: 2px solid #e6e9ec!important;
+}
+
+.portlet.light {
+    padding: 12px 20px 15px;
+    background-color: #fff;
+}
+
+.portlet.light.bordered {
+    border: 1px solid #e7ecf1!important;
+}
+
+.list-separated {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.profile-stat {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-stat-title {
+    color: #000;
+    font-size: 25px;
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase!important;
+}
+
+.profile-stat-text {
+    color: #ac0401;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.profile-desc-title {
+    color: #ac0401;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.profile-desc-text {
+    color: #ac0401;
+    font-size: 14px;
+}
