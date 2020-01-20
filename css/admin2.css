@@ -74,7 +74,8 @@ h2 {
 
 .left_col {
     background: #ac0401;
-    height: 100vh
+    min-height: 100vh;
+    max-height: auto;
 }
 
 .menu_section {
