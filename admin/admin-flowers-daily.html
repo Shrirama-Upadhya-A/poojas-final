@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Puja Sanskar | Admin Access</title>
-    <link rel="shortcut icon" href="images/icon.ico">
+    <link rel="shortcut icon" href="../images/icon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="css/admin.css" rel="stylesheet">
-    <link href="css/admin2.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="../css/admin.css" rel="stylesheet">
+    <link href="../css/admin2.css" rel="stylesheet">
 
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
@@ -18,23 +18,17 @@
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
 
-
-
     <body class="nav-md">
         <div class="container body">
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
                     </div>
-
                     <div class="clearfix"></div>
-
-                    <br/>
-
+                    <br>
 
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-
                         <div class="menu_section">
                             <h3>ADMIN</h3>
                             <ul class="nav side-menu">
@@ -68,17 +62,12 @@
 
                                             </ul>
                                         </li>
-
-
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <!-- /sidebar menu -->
-
-
-
                 </div>
             </div>
 
@@ -96,56 +85,66 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-
-
-
-
                 <div class="container text-center">
-
                     <img style="display:block;
-                margin-left:auto;margin-right:auto;width:30vw;padding:5vh;" src="images/logo.png">
+                margin-left:auto;margin-right:auto;width:30vw;padding:5vh;" src="../images/logo.png">
+
                     <h2>
-                        Users<br><br>
+                        Daily Subscription Flowers<br><br>
                     </h2>
 
                     <table class="rwd-table">
+
                         <tr>
                             <th>Ref. ID</th>
-                            <th>Name</th>
-                            <th>Phone Number</th>
-                            <th>Email ID</th>
-                            <th>View</th>
+                            <th>Product Name</th>
+                            <th>Cost</th>
+                            <th>Edit</th>
                         </tr>
-                        <tbody id="tableBody">
+                        <tbody id="flowerDailySub">
+                            <tr>
+                                <td data-th="Ref. ID">
+                                    refid
+                                </td>
+                                <td data-th="Product Name">
+                                    name
+                                </td>
+                                <td data-th="Cost">
+                                    500
+                                </td>
+
+                                <td data-th="View">
+                                    <a href="productpage.html">
+                                        <button type="button" style="width: 5vw;" class="btn btn-danger">
+                                    VIEW</button>
+                                    </a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-
-
             </div>
             <!-- /page content -->
-
-
         </div>
     </body>
+
     <script src="https://cdn.3up.dk/jquery@3.3.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.3up.dk/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/admin.js"></script>
 
-    <script src="js/admin.js"></script>
     <script>
-        function myFunction(n, m, id) {
-            console.log(n + "::::" + m);
+        function flowerDailySubscription(id) {
+            console.log(id);
             var myData = {
-                'name': n,
-                'email': m,
                 'id': id
             };
             localStorage.setItem('ObjectToPass', JSON.stringify(myData));
-            window.open("../userpage.html", "_top");
+            window.open("../productpage.html", "_top");
         }
     </script>
+
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -163,7 +162,9 @@
         const auth = firebase.auth();
         const db = firebase.database();
     </script>
-    <script src="js/adminUsers.js"></script>
+
+    <script src="../js/adminFlowersDaily.js"></script>
+
     </body>
 </head>
 

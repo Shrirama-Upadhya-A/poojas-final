@@ -375,3 +375,152 @@ h2 {
     color: #ac0401;
     font-size: 14px;
 }
+
+label,
+input,
+button {
+    display: block;
+    margin: 5px;
+}
+
+input {
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 2px 1px;
+}
+
+label {
+    padding-left: 2px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.actionButtons {
+    margin: 5px 5px 0;
+}
+
+.cancelButton {
+    margin-right: 10px;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.saveButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #9db0a3;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+.saveButton:hover,
+.editButton:hover {
+    background: #6d6d6d;
+}
+
+.editButton {
+    display: none;
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-family: bfont;
+    margin-left: 0px;
+    background: #ac0401;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: background 0.4s ease;
+}
+
+input[disabled] {
+    color: #000;
+    border-color: transparent;
+}
+
+.readOnly .actionButtons {
+    display: none;
+}
+
+.readOnly .editButton {
+    display: block;
+    cursor: pointer;
+}
+
+.formSection.disabled * {
+    opacity: .5;
+}
+
+.disabled .editButton {
+    display: block;
+    cursor: default;
+}
+
+.disabled .editButton:hover {
+    background: #9db0a3;
+}
+
+.avatar-upload {
+    position: relative;
+    margin: 50px auto;
+}
+
+.avatar-upload .avatar-edit {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    top: -20px;
+}
+
+.avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.avatar-upload .avatar-edit input+label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #ac0401;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input+label:hover {
+    background: #949494;
+    border-color: #d6d6d6;
+}
+
+.avatar-upload .avatar-edit input+label:after {
+    content: "\f040";
+    font-family: 'FontAwesome';
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-upload .avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

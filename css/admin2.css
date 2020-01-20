@@ -344,7 +344,7 @@ a:hover {
 }
 
 .nav.child_menu li {
-    padding-left: 36px
+    padding-left: 36px;
 }
 
 .nav-md ul.nav.child_menu li:before {
@@ -376,7 +376,7 @@ a:hover {
 }
 
 .nav.child_menu li li:hover {
-    background: 0 0
+    background: 0 0;
 }
 
 .nav.child_menu li li a:hover {
@@ -577,4 +577,9 @@ div[data-role=editor-toolbar] {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none
+}
+
+.body {
+    margin-left: 0px;
+    margin-right: 0px;
 }
