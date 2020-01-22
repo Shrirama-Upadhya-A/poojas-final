@@ -219,6 +219,7 @@
         color: rgb(0, 0, 0);
     }
     
+<<<<<<< HEAD
     .button:hover {
         color: #000 !important;
         background-color: transparent;
@@ -229,6 +230,8 @@
         transition: all 1.2s ease 0s;
     }
     
+=======
+>>>>>>> eedf55d9421e53236ae50bb768ee35ecbfdf6596
     .button-small {
         box-sizing: border-box;
         -webkit-appearance: none;
