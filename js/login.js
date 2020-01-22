@@ -8,15 +8,6 @@ $(document).ready(function() {
 
     $("img").height($(".main-box").height());
 
-    $(".to-signin").on("click", function() {
-        $(this)
-            .addClass("top-active-button")
-            .siblings()
-            .removeClass("top-active-button");
-        $(".form-signup").slideUp(1600);
-        $(".form-signin").slideDown(1600);
-    });
-
     $(".to-signup").on("click", function() {
         $(this)
             .addClass("top-active-button")
@@ -26,13 +17,13 @@ $(document).ready(function() {
         $(".form-signup").slideDown(1600);
     });
 
-    $(".to-signin-link").on("click", function() {
-        $(".to-signin")
+    $(".to-signin").on("click", function() {
+        $(this)
             .addClass("top-active-button")
             .siblings()
             .removeClass("top-active-button");
-        $(".form-signup").slideUp(500);
-        $(".form-signin").slideDown(500);
+        $(".form-signup").slideUp(1600);
+        $(".form-signin").slideDown(1600);
     });
 
     $(".to-signup-link").on("click", function() {
@@ -42,6 +33,15 @@ $(document).ready(function() {
             .removeClass("top-active-button");
         $(".form-signin").slideUp(500);
         $(".form-signup").slideDown(500);
+    });
+
+    $(".to-signin-link").on("click", function() {
+        $(".to-signin")
+            .addClass("top-active-button")
+            .siblings()
+            .removeClass("top-active-button");
+        $(".form-signup").slideUp(500);
+        $(".form-signin").slideDown(500);
     });
 });
 

@@ -27,9 +27,30 @@
             <div class="form-cont">
 
                 <div class="top-buttons">
-                    <img src="images/logo.png">
+                    <a href="index.html">
+                        <img src="images/logo.png">
+                    </a>
                 </div>
+                <div class="form form-signin">
+                    <form id="test-form" action="#">
 
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" oninvalid="setCustomValidity('Enter A Valid Email ID')" onchange="try{setCustomValidity('')}catch(e){}" required />
+                        </div>
+                        <br>
+
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" required />
+                        </div>
+
+                        <a style="float:right;padding-top:10vh;margin-right:100px;color:#ac0401;text-decoration:none;font-family:bfont;font-size:0.7em;" href="#" class="lined-link2 to-signup-link">Forgot Password?</a>
+                        <br> <br>
+                        <input type="submit" class="button" value="Sign In" />
+                        <a style="color:#ac0401;text-decoration:none;font-family:bfont;font-size:0.7em;" href="#" class="lined-link to-signup-link">Don't Have An Account? Create New One</a>
+                    </form>
+                </div>
                 <div class="form form-signup">
                     <form id="test-form" action="#">
                         <br>
@@ -59,28 +80,7 @@
                         <a style="color:#ac0401;text-decoration:none;font-family:bfont;font-size:0.7em;" href="#" class="lined-link to-signin-link">Have An Account? Sign In Here</a>
                     </form>
                 </div>
-                <div class="form form-signin">
-                    <form id="test-form" action="#">
 
-                        <div class="input-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" oninvalid="setCustomValidity('Enter A Valid Email ID')" onchange="try{setCustomValidity('')}catch(e){}" required />
-                        </div>
-                        <br>
-
-                        <div class="input-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" required />
-                        </div>
-
-                        <a style="float:right;padding-top:10vh;margin-right:100px;color:#ac0401;text-decoration:none;font-family:bfont;font-size:0.7em;" href="#" class="lined-link2 to-signup-link">Forgot Password?</a>
-                        <br> <br>
-                        <input type="submit" class="button" value="Sign In" />
-                        <a style="color:#ac0401;text-decoration:none;font-family:bfont;font-size:0.7em;" href="#" class="lined-link to-signup-link">Don't Have An Account? Create New One</a>
-
-
-                    </form>
-                </div>
                 <div class="clear-fix"></div>
             </div>
 

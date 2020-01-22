@@ -262,9 +262,13 @@ input[type="number"] {
     color: #fff;
 }
 
-.form-signin {
+.form-signup {
     display: none;
-    padding-top: 120px;
+    padding-top: 10px;
+}
+
+.form-signin {
+    padding-top: 110px;
 }
 
 input {
