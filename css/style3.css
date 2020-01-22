@@ -94,7 +94,10 @@
 }
 
 .tab-content h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    color: #ac0401;
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 
 .nav-tabs {
@@ -114,11 +117,18 @@
 
 .nav-tabs .nav-link.active {
     background: #FFF;
-    border-top-width: 5px;
+    border-width: 5px;
     border-radius: 25px;
     border-bottom-left-radius: 5px;
-    margin-top: -20px;
+    margin-top: -5px;
     border-bottom-right-radius: 0px;
-    border-color: #ac0401 #fff #FFF;
+    border-color: #ac0401 #ac0401 #fff;
+    border-bottom: 0px;
     color: #ac0401;
+}
+
+#shop {
+    width: 98%;
+    display: block;
+    margin: auto;
 }
