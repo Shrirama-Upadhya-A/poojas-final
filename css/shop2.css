@@ -215,7 +215,8 @@
 .product {
     position: relative;
     perspective: 800px;
-    width: 33%;
+    width: 33.33%;
+    margin: auto;
     height: 471px;
     transform-style: preserve-3d;
     transition: transform 5s;
@@ -252,7 +253,7 @@
 }
 
 .make3D {
-    box-shadow: 0px 5px 15px -1px #000;
+    box-shadow: 0px 5px 15px -1px rgb(196, 196, 196);
 }
 
 .make3D.animate .product-back,
