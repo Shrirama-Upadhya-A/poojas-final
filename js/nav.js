@@ -34,4 +34,8 @@ function myFunction() {
     } else {
         navbar.classList.remove("sticky");
     }
-}
+};
+
+AOS.init({
+    duration: 1200,
+})

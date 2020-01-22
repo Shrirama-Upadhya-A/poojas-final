@@ -65,12 +65,10 @@
     /*NAVBAR*/
     
     a {
-        cursor: pointer;
         color: rgb(41, 41, 41);
     }
     
     a:hover {
-        cursor: pointer;
         color: black;
     }
     
@@ -84,6 +82,11 @@
         height: 15vh;
         background: #fff;
         box-shadow: 0 3px 12px rgba(0, 0, 0, .15)
+    }
+    
+    h4 {
+        font-family: sbfont;
+        color: black;
     }
     
     .brand {
@@ -204,14 +207,12 @@
         position: absolute;
         left: 18px;
         top: 29px;
-        cursor: pointer;
         padding: 10px 35px 16px 0
     }
     
     #nav-toggle span,
     #nav-toggle span:after,
     #nav-toggle span:before {
-        cursor: pointer;
         border-radius: 1px;
         height: 5px;
         width: 35px;
@@ -303,7 +304,6 @@
         background-color: #ac0401;
         border: 3px solid #e74c3c;
         border-radius: 0.2em;
-        cursor: pointer;
         text-align: center;
         display: inline-block;
         align-self: center;
@@ -324,14 +324,14 @@
     
     .button:hover,
     .button:focus {
-        color: rgb(0, 0, 0);
+        color: #ac0401;
         outline: 0;
         background-position: 0;
-        color: rgb(0, 0, 0);
+        color: #ac0401;
     }
     
     .button:hover {
-        color: #000 !important;
+        color: #ac0401;
         background-color: transparent;
         text-shadow: nthree;
         -webkit-transition: all 1.2s ease 0s;
@@ -347,7 +347,6 @@
         appearance: none;
         background-color: #f8dd42;
         border-radius: 0.2em;
-        cursor: pointer;
         text-align: center;
         display: inline-block;
         align-self: center;
@@ -404,7 +403,6 @@
         display: block;
         position: absolute;
         color: #ac0401;
-        cursor: pointer;
         font-size: 2em;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -421,9 +419,7 @@
         z-index: 22222222;
     }
     
-    .testim .arrow:before {
-        cursor: pointer;
-    }
+    .testim .arrow:before {}
     
     .testim .arrow.left {
         left: 10px;
@@ -452,7 +448,6 @@
         border-radius: 50%;
         border: 1px solid rgb(61, 61, 61);
         margin: 0 10px;
-        cursor: pointer;
         -webkit-transition: all .5s ease-in-out;
         -ms-transition: all .5s ease-in-out;
         -moz-transition: all .5s ease-in-out;
@@ -965,12 +960,12 @@
     
     .site-footer a:hover {
         color: #ffef10;
-        cursor: pointer;
         text-decoration: none;
     }
     
     .footer-links {
         padding-left: 0;
+        margin: 0;
         list-style: none;
     }
     
@@ -988,7 +983,6 @@
     .footer-links a:focus,
     .footer-links a:hover {
         color: #ffef10;
-        cursor: pointer;
         text-decoration: none;
     }
     
@@ -1120,6 +1114,14 @@
         position: relative;
     }
     
+    .faq h2 {
+        color: #ac0401;
+    }
+    
+    .faq h5 {
+        color: #ac0401;
+    }
+    
     .tab-content {
         box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
     }
@@ -1131,7 +1133,7 @@
     .tab-content .card-header {
         padding: 15px 16px;
         border-radius: 0;
-        background-color: #f6f6f6;
+        background-color: #fff;
     }
     
     .tab-content .card-header h5 {
@@ -1157,7 +1159,7 @@
     }
     
     .tab-content .card-body p {
-        color: #616161;
+        color: #000;
     }
     
     .tab-content .card-body p:last-of-type {
@@ -1175,7 +1177,7 @@
     /*SECTIONS*/
     
     .faq {
-        background-color: #dddddd;
+        background-color: #f6f6f6;
     }
     
     .spacing {
@@ -1209,3 +1211,4 @@
         display: none;
         height: 1px;
     }
+    /*loader*/
