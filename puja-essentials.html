@@ -18,95 +18,90 @@
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="30">
+    <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
-    <div class="nav-menu fixed-top">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-dark navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">
-                        <img style="margin-left:3vw;" src="images/logo.png" class="img-fluid logo" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
-                                class="navbar-toggler-icon"></span> </button>
-                    <div class="collapse navbar-collapse" id="navbar">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"> <a class="nav-link" style="font-size:17px;" href="flowers-subscription.html">PUJA FLOWERS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" style="font-size:17px;" href="puja-essentials.html">PUJA ESSENTIALS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" style="font-size:17px;" href="pundits.html">PUJA PUNDITS</a> </li>
+        <section id="navbar" class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="index.html">
+                        <img class="logo" src="images/logo.png">
+                    </a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="flowers-subscription.html">Puja Flowers</a>
+                        </li>
+                        <li>
+                            <a href="puja-essentials.html">Puja Essentials</a>
+                        </li>
+                        <li>
+                            <a href="pundits.html">Puja Pundits</a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:17px;" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="#!"> <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:17px;" href="#">
-                                    <i class="fa fa-shopping-cart"></i>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:17px;" href="signup.html">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li>
+                            <a href="signup.html"> <i class="fa fa-user"></i></a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
-        </div>
-    </div>
+        </section>
 
 
+        <div id="trainings" class="section light-bg">
+            <div class="container">
 
-    <div id="trainings" class="section light-bg">
-        <div class="container">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" style=" margin-right: 2px;" data-toggle="tab" href="#utensils">
+                            <img style="height:8vh;" src="images/assets/utensils.png">&emsp;Utensils
+                        </a>
+                    </li>
 
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" style=" margin-right: 2px;" data-toggle="tab" href="#utensils">
-                        <img style="height:8vh;" src="images/assets/utensils.png">&emsp;Utensils
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#samagri">
+                            <img style="height:8vh;" src="images/assets/samagri.png">&emsp;Samagri
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#samagri">
-                        <img style="height:8vh;" src="images/assets/samagri.png">&emsp;Samagri
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#poshak">
+                            <img style="height:8vh;" src="images/assets/poshak.png">&emsp;Poshak
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#poshak">
-                        <img style="height:8vh;" src="images/assets/poshak.png">&emsp;Poshak
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#mandirs">
+                            <img style="height:8vh;" src="images/assets/temple.png">&emsp;Mandirs
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#mandirs">
-                        <img style="height:8vh;" src="images/assets/temple.png">&emsp;Mandirs
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#idols">
+                            <img style="height:8vh;" src="images/assets/god.png">&emsp;Idols
+                        </a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" style=" margin-left: 2px;" data-toggle="tab" href="#idols">
-                        <img style="height:8vh;" src="images/assets/god.png">&emsp;Idols
-                    </a>
-                </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="utensils">
 
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="utensils">
+                        <h2>Utensils</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
+                        </p>
+                        <div id="wrapper">
+                            <div id="grid">
 
-                    <h2>Utensils</h2>
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
-                    </p>
-                    <div id="wrapper">
-                        <div id="grid">
+                                <!--product starts-->
 
-                            <!--product starts-->
-
-                            <!-- <div class="product">
+                                <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -138,24 +133,24 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <!--product ends-->
+                                <!--product ends-->
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="tab-pane fade" id="samagri">
-                    <h2>Samagri</h2>
+                    <div class="tab-pane fade" id="samagri">
+                        <h2>Samagri</h2>
 
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
-                    </p>
-                    <div id="wrapper">
-                        <div id="grid">
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
+                        </p>
+                        <div id="wrapper">
+                            <div id="grid">
 
-                            <!--product starts-->
+                                <!--product starts-->
 
-                            <!-- <div class="product">
+                                <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -187,25 +182,25 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <!--product ends-->
+                                <!--product ends-->
 
+                            </div>
                         </div>
+
                     </div>
 
-                </div>
+                    <div class="tab-pane fade" id="poshak">
+                        <h2>Poshak</h2>
 
-                <div class="tab-pane fade" id="poshak">
-                    <h2>Poshak</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
+                        </p>
+                        <div id="wrapper">
+                            <div id="grid">
 
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
-                    </p>
-                    <div id="wrapper">
-                        <div id="grid">
+                                <!--product starts-->
 
-                            <!--product starts-->
-
-                            <!-- <div class="product">
+                                <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -237,26 +232,26 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <!--product ends-->
+                                <!--product ends-->
 
+                            </div>
                         </div>
+
                     </div>
 
-                </div>
+                    <div class="tab-pane fade" id="mandirs">
+                        <h2>Mandirs</h2>
 
-                <div class="tab-pane fade" id="mandirs">
-                    <h2>Mandirs</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
+                        </p>
 
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
-                    </p>
+                        <div id="wrapper">
+                            <div id="grid">
 
-                    <div id="wrapper">
-                        <div id="grid">
+                                <!--product starts-->
 
-                            <!--product starts-->
-
-                            <!-- <div class="product">
+                                <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -290,22 +285,22 @@
                             </div>
                             <!--product ends-->
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="tab-pane fade" id="idols">
-                    <h2>Idols</h2>
+                    <div class="tab-pane fade" id="idols">
+                        <h2>Idols</h2>
 
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
-                    </p>
-                    <div id="wrapper">
-                        <div id="grid">
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi rerum expedita perferendis aut ipsa? Sit vel accusantium est iure officiis accusamus beatae, dolores rerum quia repellendus, perferendis maiores. Possimus!
+                        </p>
+                        <div id="wrapper">
+                            <div id="grid">
 
-                            <!--product starts-->
+                                <!--product starts-->
 
-                            <!-- <div class="product">
+                                <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -336,98 +331,100 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> --> -->
-                            <!--product ends-->
+                            </div> -->-->
+                                <!--product ends-->
 
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
-
             </div>
         </div>
-    </div>
 
 
-    <!-- Site footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-4">
-                    <h6>INFORMATION</h6>
-                    <p class="text-justify">
-                        902, Puja Sanskar, Shri Krishna Building<br> New Link Road,<br> Opp. Laxmi Industrial Estate,<br> Andheri West, Mumbai,<br> Maharashtra - 400053<br><br>
-                        <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
-                            <i class="fa fa-envelope">
+        <!-- Site footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <h6>INFORMATION</h6>
+                        <p class="text-justify">
+                            902, Puja Sanskar, Shri Krishna Building<br> New Link Road,<br> Opp. Laxmi Industrial Estate,<br> Andheri West, Mumbai,<br> Maharashtra - 400053<br><br>
+                            <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
+                                <i class="fa fa-envelope">
                             </i>&nbsp;&nbsp; info@pujasanskar.com
-                        </a><br>
-                        <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
-                            <i class="fa fa-phone">
+                            </a><br>
+                            <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
+                                <i class="fa fa-phone">
                             </i>&nbsp;&nbsp; +91 1234567891
-                        </a>
-                    </p>
-                </div>
+                            </a>
+                        </p>
+                    </div>
 
-                <div class="col-xs-6 col-md-4">
-                    <h6>QUICK LINKS</h6>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="flowers-subscription.html">Puja Flowers</a></li>
-                        <li><a href="puja-essentials.html">Puja Essentials</a></li>
-                        <li><a href="pundits.html">Puja Pundits</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
+                    <div class="col-xs-6 col-md-4">
+                        <h6>QUICK LINKS</h6>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="flowers-subscription.html">Puja Flowers</a></li>
+                            <li><a href="puja-essentials.html">Puja Essentials</a></li>
+                            <li><a href="pundits.html">Puja Pundits</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
 
-                <div class="col-xs-6 col-md-4">
-                    <h6>CONNECT WITH US</h6>
-                    <ul class="footer-links">
-                        <p>Download Our App lorem ipsum</p>
-                    </ul>
+                    <div class="col-xs-6 col-md-4">
+                        <h6>CONNECT WITH US</h6>
+                        <ul class="footer-links">
+                            <p>Download Our App lorem ipsum</p>
+                        </ul>
 
-                    <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/gplay.png" alt="playstore_link"></a>
+                        <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/gplay.png" alt="playstore_link"></a>
 
-                    <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/astore.png" alt="playstore_link"></a>
+                        <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/astore.png" alt="playstore_link"></a>
 
-                    <div class="social-container">
-                        <div class="social-icons">
-                            <li>
-                                <a href="https://www.facebook.com/adroitalliance/" target="_blank">
-                                    <j class="fa fa-facebook"></j>
-                                </a>
-                            </li>
-                            <li><a href="https://www.instagram.com/adroitalliance/" target="_blank"><i
+                        <div class="social-container">
+                            <div class="social-icons">
+                                <li>
+                                    <a href="https://www.facebook.com/adroitalliance/" target="_blank">
+                                        <j class="fa fa-facebook"></j>
+                                    </a>
+                                </li>
+                                <li><a href="https://www.instagram.com/adroitalliance/" target="_blank"><i
                                         class="fa fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/adroit-alliance/about/" target="_blank"><i
+                                <li><a href="https://www.linkedin.com/company/adroit-alliance/about/" target="_blank"><i
                                         class="fa fa-linkedin"></i></a></li>
-                            <li>
-                                <a href="https://www.youtube.com/blog/adroitalliance" target="_blank">
-                                    <k class="fa fa-youtube"></k>
-                                </a>
-                            </li>
+                                <li>
+                                    <a href="https://www.youtube.com/blog/adroitalliance" target="_blank">
+                                        <k class="fa fa-youtube"></k>
+                                    </a>
+                                </li>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">
-                        Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script> All rights reserved | Powered by <a style="color: #ffef10;" href="http://www.adroitalliance.in" target="_blank">ADROIT ALLIANCE</a>
-                    </p>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | Powered by <a style="color: #ffef10;" href="http://www.adroitalliance.in" target="_blank">ADROIT ALLIANCE</a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/shop2.js"></script>
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/shop2.js"></script>
+        <script src="js/nav.js"></script>
+
+    </body>
 
 </html>

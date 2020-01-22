@@ -19,283 +19,282 @@
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
 
 
-<body data-spy="scroll" data-target="#navbar" data-offset="30">
+    <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
-    <div class="nav-menu fixed-top">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-dark navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">
-                        <img style="margin-left:3vw;" src="images/logo.png" class="img-fluid logo" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
-                                class="navbar-toggler-icon"></span> </button>
-                    <div class="collapse navbar-collapse" id="navbar">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"> <a class="nav-link" style="font-size:17px;" href="flowers-subscription.html">PUJA FLOWERS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" style="font-size:17px;" href="puja-essentials.html">PUJA ESSENTIALS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" style="font-size:17px;" href="pundits.html">PUJA PUNDITS</a> </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:17px;" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </li>
+        <section id="navbar" class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="index.html">
+                        <img class="logo" src="images/logo.png">
+                    </a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="flowers-subscription.html">Puja Flowers</a>
+                        </li>
+                        <li>
+                            <a href="puja-essentials.html">Puja Essentials</a>
+                        </li>
+                        <li>
+                            <a href="pundits.html">Puja Pundits</a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:17px;" href="#">
-                                    <i class="fa fa-shopping-cart"></i>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="#!"> <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:17px;" href="signup.html">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li>
+                            <a href="signup.html"> <i class="fa fa-user"></i></a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div id="shop" class="section light-bg">
-        <div class="container">
+        <div id="shop" class="section light-bg">
+            <div class="container">
 
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link" style=" margin-right: 2px;" data-toggle="tab" href="#dailysubscription">
-                        <img style="height:8vh;" src="images/assets/subscription.png">&emsp;Daily Subscription
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" style=" margin-left: 2px;" data-toggle="tab" href="#specialflowers">
-                        <img style="height:8vh;" src="images/assets/special.png">Special Flowers
-                    </a>
-                </li>
-
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane fade" id="dailysubscription">
-
-                    <h2>Daily Subscription</h2>
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eum adipisci error maiores placeat doloribus dolor? Provident, perspiciatis animi nisi voluptatem, accusamus maiores doloribus quam distinctio at doloremque tempora non!
-                    </p>
-
-                    <div id="wrapper">
-                        <div id="grid">
-                            <div id = "lol">
-
-                            <!--product starts-->
-
-                            <!-- <div class="product">
-                                <div class="make3D">
-                                    <div class="product-front">
-                                        <div class="shadow"></div>
-                                        <img src="images/1.jpg" alt="" />
-                                        <div class="image_overlay"></div>
-                                        <div class="add_to_cart">Add to cart</div>
-                                        <a href="product.html">
-                                            <div class="view_details2">View Details</div>
-                                        </a>
-                                        <div class="stats">
-                                            <div class="stats-container">
-                                                <span class="product_price">&#8377; 200</span>
-                                                <span class="product_name">Product Name</span>
-                                                <p>Product Type</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="product-back">
-                                        <div class="shadow"></div>
-                                        <div class="carousel">
-                                            <h2>hellasdfghjkljghasdfgyhuijofrdeo</h2>
-                                        </div>
-                                        <div class="flip-back">
-                                            <div class="cy"></div>
-                                            <div class="cx"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!--product ends-->
-</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade  show active" id="specialflowers">
-                    <h2>Special Flowers</h2>
-
-                    <p class="lead">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque magnam distinctio provident, et rerum ratione delectus, incidunt eveniet eos iste itaque doloribus minus quibusdam doloremque laudantium voluptas ipsa ipsam ut. </p>
-
-
-                    <div id="wrapper">
-                        <div id="grid">
-<div id = "lol2">
-                            <!--product starts-->
-
-                            <!-- <div class="product">
-                                <div class="make3D">
-                                    <div class="product-front">
-                                        <div class="shadow"></div>
-                                        <img src="images/1.jpg" alt="" />
-                                        <div class="image_overlay"></div>
-                                        <div class="add_to_cart">Add to cart</div>
-                                        <a href="product.html">
-                                            <div class="view_details2">View Details</div>
-                                        </a>
-                                        <div class="stats">
-                                            <div class="stats-container">
-                                                <span class="product_price">&#8377; 200</span>
-                                                <span class="product_name">Product Name</span>
-                                                <p>Product Type</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="product-back">
-                                        <div class="shadow"></div>
-                                        <div class="carousel">
-                                            <h2>hellasdfghjkljghasdfgyhuijofrdeo</h2>
-                                        </div>
-                                        <div class="flip-back">
-                                            <div class="cy"></div>
-                                            <div class="cx"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!--product ends-->
-                        </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Site footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-4">
-                    <h6>INFORMATION</h6>
-                    <p class="text-justify">
-                        902, Puja Sanskar, Shri Krishna Building<br> New Link Road,<br> Opp. Laxmi Industrial Estate,<br> Andheri West, Mumbai,<br> Maharashtra - 400053<br><br>
-                        <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
-                            <i class="fa fa-envelope">
-                            </i>&nbsp;&nbsp; info@pujasanskar.com
-                        </a><br>
-                        <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
-                            <i class="fa fa-phone">
-                            </i>&nbsp;&nbsp; +91 1234567891
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" style=" margin-right: 2px;" data-toggle="tab" href="#dailysubscription">
+                            <img style="height:8vh;" src="images/assets/subscription.png">&emsp;Daily Subscription
                         </a>
-                    </p>
-                </div>
+                    </li>
 
-                <div class="col-xs-6 col-md-4">
-                    <h6>QUICK LINKS</h6>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="flowers-subscription.html">Puja Flowers</a></li>
-                        <li><a href="puja-essentials.html">Puja Essentials</a></li>
-                        <li><a href="pundits.html">Puja Pundits</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" style=" margin-left: 2px;" data-toggle="tab" href="#specialflowers">
+                            <img style="height:8vh;" src="images/assets/special.png">Special Flowers
+                        </a>
+                    </li>
 
-                <div class="col-xs-6 col-md-4">
-                    <h6>CONNECT WITH US</h6>
-                    <ul class="footer-links">
-                        <p>Download Our App lorem ipsum</p>
-                    </ul>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="dailysubscription">
 
-                    <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/gplay.png" alt="playstore_link"></a>
+                        <h2>Daily Subscription</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eum adipisci error maiores placeat doloribus dolor? Provident, perspiciatis animi nisi voluptatem, accusamus maiores doloribus quam distinctio at doloremque tempora non!
+                        </p>
 
-                    <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/astore.png" alt="playstore_link"></a>
+                        <div id="wrapper">
+                            <div id="grid">
+                                <div id="lol">
 
-                    <div class="social-container">
-                        <div class="social-icons">
-                            <li>
-                                <a href="https://www.facebook.com/adroitalliance/" target="_blank">
-                                    <j class="fa fa-facebook"></j>
-                                </a>
-                            </li>
-                            <li><a href="https://www.instagram.com/adroitalliance/" target="_blank"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/adroit-alliance/about/" target="_blank"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                            <li>
-                                <a href="https://www.youtube.com/blog/adroitalliance" target="_blank">
-                                    <k class="fa fa-youtube"></k>
-                                </a>
-                            </li>
+                                    <!--product starts-->
+
+                                    <!-- <div class="product">
+                                <div class="make3D">
+                                    <div class="product-front">
+                                        <div class="shadow"></div>
+                                        <img src="images/1.jpg" alt="" />
+                                        <div class="image_overlay"></div>
+                                        <div class="add_to_cart">Add to cart</div>
+                                        <a href="product.html">
+                                            <div class="view_details2">View Details</div>
+                                        </a>
+                                        <div class="stats">
+                                            <div class="stats-container">
+                                                <span class="product_price">&#8377; 200</span>
+                                                <span class="product_name">Product Name</span>
+                                                <p>Product Type</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-back">
+                                        <div class="shadow"></div>
+                                        <div class="carousel">
+                                            <h2>hellasdfghjkljghasdfgyhuijofrdeo</h2>
+                                        </div>
+                                        <div class="flip-back">
+                                            <div class="cy"></div>
+                                            <div class="cx"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                                    <!--product ends-->
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">
-                        Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script> All rights reserved | Powered by <a style="color: #ffef10;" href="http://www.adroitalliance.in" target="_blank">ADROIT ALLIANCE</a>
-                    </p>
+
+                    <div class="tab-pane fade  show active" id="specialflowers">
+                        <h2>Special Flowers</h2>
+
+                        <p class="lead">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque magnam distinctio provident, et rerum ratione delectus, incidunt eveniet eos iste itaque doloribus minus quibusdam doloremque laudantium voluptas ipsa ipsam ut. </p>
+
+
+                        <div id="wrapper">
+                            <div id="grid">
+                                <div id="lol2">
+                                    <!--product starts-->
+
+                                    <!-- <div class="product">
+                                <div class="make3D">
+                                    <div class="product-front">
+                                        <div class="shadow"></div>
+                                        <img src="images/1.jpg" alt="" />
+                                        <div class="image_overlay"></div>
+                                        <div class="add_to_cart">Add to cart</div>
+                                        <a href="product.html">
+                                            <div class="view_details2">View Details</div>
+                                        </a>
+                                        <div class="stats">
+                                            <div class="stats-container">
+                                                <span class="product_price">&#8377; 200</span>
+                                                <span class="product_name">Product Name</span>
+                                                <p>Product Type</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-back">
+                                        <div class="shadow"></div>
+                                        <div class="carousel">
+                                            <h2>hellasdfghjkljghasdfgyhuijofrdeo</h2>
+                                        </div>
+                                        <div class="flip-back">
+                                            <div class="cy"></div>
+                                            <div class="cx"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                                    <!--product ends-->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
-    </footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/shop2.js"></script>
-    <script>
-        function flowerSpecials(id) {
-            console.log(id);
-            var myData = {
-                'id': id,
-                'type' : "Specials",
-                'mainType': "Flowers"
+
+        <!-- Site footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <h6>INFORMATION</h6>
+                        <p class="text-justify">
+                            902, Puja Sanskar, Shri Krishna Building<br> New Link Road,<br> Opp. Laxmi Industrial Estate,<br> Andheri West, Mumbai,<br> Maharashtra - 400053<br><br>
+                            <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
+                                <i class="fa fa-envelope">
+                            </i>&nbsp;&nbsp; info@pujasanskar.com
+                            </a><br>
+                            <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
+                                <i class="fa fa-phone">
+                            </i>&nbsp;&nbsp; +91 1234567891
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <h6>QUICK LINKS</h6>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="flowers-subscription.html">Puja Flowers</a></li>
+                            <li><a href="puja-essentials.html">Puja Essentials</a></li>
+                            <li><a href="pundits.html">Puja Pundits</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <h6>CONNECT WITH US</h6>
+                        <ul class="footer-links">
+                            <p>Download Our App lorem ipsum</p>
+                        </ul>
+
+                        <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/gplay.png" alt="playstore_link"></a>
+
+                        <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank"><img style="width:150px;" src="images/astore.png" alt="playstore_link"></a>
+
+                        <div class="social-container">
+                            <div class="social-icons">
+                                <li>
+                                    <a href="https://www.facebook.com/adroitalliance/" target="_blank">
+                                        <j class="fa fa-facebook"></j>
+                                    </a>
+                                </li>
+                                <li><a href="https://www.instagram.com/adroitalliance/" target="_blank"><i
+                                        class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/adroit-alliance/about/" target="_blank"><i
+                                        class="fa fa-linkedin"></i></a></li>
+                                <li>
+                                    <a href="https://www.youtube.com/blog/adroitalliance" target="_blank">
+                                        <k class="fa fa-youtube"></k>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | Powered by <a style="color: #ffef10;" href="http://www.adroitalliance.in" target="_blank">ADROIT ALLIANCE</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/shop2.js"></script>
+        <script>
+            function flowerSpecials(id) {
+                console.log(id);
+                var myData = {
+                    'id': id,
+                    'type': "Specials",
+                    'mainType': "Flowers"
+                };
+                localStorage.setItem('IDData', JSON.stringify(myData));
+                window.open("../product.html", "_top");
+            }
+        </script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
+                authDomain: "puja-sanskar.firebaseapp.com",
+                databaseURL: "https://puja-sanskar.firebaseio.com",
+                projectId: "puja-sanskar",
+                storageBucket: "puja-sanskar.appspot.com",
+                messagingSenderId: "713940980877",
+                appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
+                measurementId: "G-SFJFNS80VC"
             };
-            localStorage.setItem('IDData', JSON.stringify(myData));
-            window.open("../product.html", "_top");
-        }
-    </script>
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
-            authDomain: "puja-sanskar.firebaseapp.com",
-            databaseURL: "https://puja-sanskar.firebaseio.com",
-            projectId: "puja-sanskar",
-            storageBucket: "puja-sanskar.appspot.com",
-            messagingSenderId: "713940980877",
-            appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
-            measurementId: "G-SFJFNS80VC"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-        const db = firebase.database();
-    </script>
-<script src="js/userFlowersSubscriptions.js"></script>
-    <script src="js/userFlowersSpecials.js"></script>
-</body>
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+            const db = firebase.database();
+        </script>
+        <script src="js/userFlowersSubscriptions.js"></script>
+        <script src="js/userFlowersSpecials.js"></script>
+    </body>
 </head>
+
 </html>
