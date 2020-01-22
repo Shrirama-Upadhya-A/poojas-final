@@ -352,3 +352,29 @@ input[type="button"]:focus {
     border: none;
     outline: none;
 }
+
+
+/*END SECTIONS*/
+
+ ::-webkit-scrollbar-button {
+    display: none;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+}
+
+
+/* background of the scrollbar except button or resizer */
+
+ ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: 2px transparent;
+    border-radius: 50px;
+}
+
+ ::-webkit-scrollbar {
+    background-color: #ffff;
+    display: none;
+    height: 1px;
+}
