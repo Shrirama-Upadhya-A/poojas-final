@@ -217,7 +217,7 @@
     perspective: 800px;
     width: 33.33%;
     margin: auto;
-    height: 471px;
+    height: 371px;
     transform-style: preserve-3d;
     transition: transform 5s;
     margin-bottom: 5vh;
@@ -231,16 +231,18 @@
 
 .product-front img {
     width: 100%;
+    display: block;
+    margin: auto;
+    position: relative;
 }
 
 .product-front,
 .product-back {
     width: 100%;
-    height: 480px;
+    height: 380px;
     background: #fff;
+    border-radius: 100px;
     position: absolute;
-    left: -5px;
-    right: -5px;
     -webkit-transition: all 100ms ease-out;
     -moz-transition: all 100ms ease-out;
     -o-transition: all 100ms ease-out;
@@ -254,6 +256,7 @@
 
 .make3D {
     box-shadow: 0px 5px 15px -1px rgb(196, 196, 196);
+    border-radius: 20px;
 }
 
 .make3D.animate .product-back,
@@ -270,7 +273,7 @@ div.large .product-back {
 
 .make3D {
     width: 90%;
-    height: 470px;
+    height: 370px;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -318,7 +321,7 @@ div.make3D.flip180 {
     top: 5px;
     left: 5px;
     width: 90%;
-    height: 480px;
+    height: 380px;
     box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
     -webkit-transition: 100ms ease-out;
     -moz-transition: 100ms ease-out;
@@ -330,7 +333,7 @@ div.large .make3D {
     top: 0;
     left: 0;
     width: 90%;
-    height: 480px;
+    height: 380px;
     -webkit-transition: 300ms ease-out;
     -moz-transition: 300ms ease-out;
     -o-transition: 300ms ease-out;
@@ -348,10 +351,10 @@ div.large .make3D {
 .stats-container {
     background: #fff;
     position: absolute;
-    top: 300px;
+    top: 275px;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 100px;
     padding: 24px 40px 35px 32px;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
@@ -360,7 +363,7 @@ div.large .make3D {
 }
 
 .make3D.animate .stats-container {
-    top: 350px;
+    top: 280px;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
@@ -530,7 +533,7 @@ div.c-white span {
 }
 
 div.shadow {
-    width: 335px;
+    width: 315px;
     height: 520px;
     opacity: 0;
     position: absolute;
@@ -665,11 +668,6 @@ div.shadow {
     overflow: hidden;
 }
 
-.carousel img {
-    margin-top: -22px;
-    width: 110%;
-}
-
 .arrows-perspective {
     width: 315px;
     height: 55px;
@@ -771,7 +769,7 @@ div.floating-cart {
     top: 0;
     left: 0;
     width: 315px;
-    height: 480px;
+    height: 380px;
     background: #fff;
     z-index: 200;
     overflow: hidden;
