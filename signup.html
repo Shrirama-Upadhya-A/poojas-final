@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
     <link rel="stylesheet" href="css/login.css">
-</head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
 
 <body style="font-family:mfont;">
     <div class="main-box">
@@ -109,6 +113,26 @@
 
     <script src="js/login.js"></script>
 
-</body>
+    <script src="js/login.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
+            authDomain: "puja-sanskar.firebaseapp.com",
+            databaseURL: "https://puja-sanskar.firebaseio.com",
+            projectId: "puja-sanskar",
+            storageBucket: "puja-sanskar.appspot.com",
+            messagingSenderId: "713940980877",
+            appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
+            measurementId: "G-SFJFNS80VC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.database();
+    </script>s
+    <script src= "js/userSignUPSignIn.js"></script>
 
+</body>
+</head>
 </html>

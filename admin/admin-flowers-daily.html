@@ -102,7 +102,7 @@
                             <th>Edit</th>
                         </tr>
                         <tbody id="flowerDailySub">
-                            <tr>
+                            <!-- <tr>
                                 <td data-th="Ref. ID">
                                     refid
                                 </td>
@@ -119,7 +119,7 @@
                                     VIEW</button>
                                     </a>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -138,9 +138,11 @@
         function flowerDailySubscription(id) {
             console.log(id);
             var myData = {
-                'id': id
+                'id': id,
+                'type' : "Subscriptions",
+                'mainType': "Flowers"
             };
-            localStorage.setItem('ObjectToPass', JSON.stringify(myData));
+            localStorage.setItem('IDData', JSON.stringify(myData));
             window.open("../productpage.html", "_top");
         }
     </script>

@@ -12,8 +12,11 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style3.css" rel="stylesheet">
     <link href="css/shop2.css" rel="stylesheet">
-
-</head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
@@ -89,10 +92,10 @@
 
                     <div id="wrapper">
                         <div id="grid">
-
+<div id = "lol3">
                             <!--product starts-->
 
-                            <div class="product">
+                            <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -123,9 +126,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--product ends-->
-
+                        </div>
                         </div>
                     </div>
 
@@ -141,10 +144,10 @@
 
                     <div id="wrapper">
                         <div id="grid">
-
+                            <div id = "lol4">
                             <!--product starts-->
 
-                            <div class="product">
+                            <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -175,8 +178,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--product ends-->
+                            </div>
 
                         </div>
                     </div>
@@ -192,10 +196,11 @@
 
                     <div id="wrapper">
                         <div id="grid">
+                            <div id = "lol5">
 
                             <!--product starts-->
 
-                            <div class="product">
+                            <!-- <div class="product">
                                 <div class="make3D">
                                     <div class="product-front">
                                         <div class="shadow"></div>
@@ -226,9 +231,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--product ends-->
-
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -319,6 +324,38 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/shop2.js"></script>
-</body>
+    <script>
+        function pundits(id,type) {
+            console.log(id);
+            var myData = {
+                'id': id,
+                'type' : type,
+                'mainType': "Pandits"
+            };
+            localStorage.setItem('IDData', JSON.stringify(myData));
+            window.open("../product.html", "_top");
+        }
+    </script>
 
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
+            authDomain: "puja-sanskar.firebaseapp.com",
+            databaseURL: "https://puja-sanskar.firebaseio.com",
+            projectId: "puja-sanskar",
+            storageBucket: "puja-sanskar.appspot.com",
+            messagingSenderId: "713940980877",
+            appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
+            measurementId: "G-SFJFNS80VC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.database();
+    </script>
+
+    <script src="js/userPundits.js"></script>
+</body>
+</head>
 </html>
