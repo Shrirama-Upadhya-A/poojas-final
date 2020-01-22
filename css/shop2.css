@@ -219,6 +219,7 @@
     height: 471px;
     transform-style: preserve-3d;
     transition: transform 5s;
+    margin-bottom: 5vh;
     float: left;
     -webkit-transition: width 500ms ease-in-out;
     -moz-transition: width 500ms ease-in-out;
@@ -251,7 +252,7 @@
 }
 
 .make3D {
-    box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 5px 15px -1px #000;
 }
 
 .make3D.animate .product-back,
