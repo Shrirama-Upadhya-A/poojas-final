@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style3.css" rel="stylesheet">
-</head>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
@@ -127,7 +131,8 @@
                     <p class="lead">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, iure soluta. Perferendis doloremque explicabo nam ab cumque amet, doloribus itaque distinctio quos excepturi maiores enim adipisci, voluptates omnis inventore hic. </p>
 
-                    <div id="make-3D-space">
+                        <div id = "columns2">
+                    <!-- <div id="make-3D-space">
                         <div id="product-card">
                             <div id="product-front">
                                 <div class="shadow"></div>
@@ -165,9 +170,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div id="make-3D-space">
+                    <!-- <div id="make-3D-space">
                         <div id="product-card">
                             <div id="product-front">
                                 <div class="shadow"></div>
@@ -185,6 +190,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div> -->
                     </div>
                 </div>
 
@@ -274,7 +280,53 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/shop.js"></script>
+    <script>
+        function flowerDailySubscription(id) {
+            console.log(id);
+            var myData = {
+                'id': id,
+                'type' : "Subscriptions",
+                'mainType': "Flowers"
+            };
+            localStorage.setItem('IDData', JSON.stringify(myData));
+            console.log(myData);
+            window.open("../poojas-final/product.html", "_top");
+        }
+    </script>
+    <script>
+        function flowerSpecials(id) {
+            console.log(id);
+            var myData = {
+                'id': id,
+                'type' : "Specials",
+                'mainType': "Flowers"
+            };
+            localStorage.setItem('IDData', JSON.stringify(myData));
+            window.open("../product.html", "_top");
+        }
+    </script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
+            authDomain: "puja-sanskar.firebaseapp.com",
+            databaseURL: "https://puja-sanskar.firebaseio.com",
+            projectId: "puja-sanskar",
+            storageBucket: "puja-sanskar.appspot.com",
+            messagingSenderId: "713940980877",
+            appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
+            measurementId: "G-SFJFNS80VC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.database();
+    </script>
+<script src="js/userFlowersSpecials.js"></script>
+    <script src="js/userFlowersSubscriptions.js"></script>
 
 </body>
-
+</head>
 </html>
