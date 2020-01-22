@@ -15,7 +15,7 @@ loginForm.addEventListener('submit', (e) => {
         if (user) {
           // User logged in already or has just logged in.
           console.log(user.uid);
-          window.open("../admin/access.html","_top");
+          window.open("../access.html","_top");
         } else {
           // User not logged in or has just logged out.
         }

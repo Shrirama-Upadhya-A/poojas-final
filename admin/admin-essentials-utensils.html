@@ -12,12 +12,7 @@
     <link href="../css/admin.css" rel="stylesheet">
     <link href="../css/admin2.css" rel="stylesheet">
 
-    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
-
+</head>
 
 <body class="nav-md">
     <div class="container body">
@@ -132,39 +127,7 @@
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/script.js"></script>
 <script src="../js/admin.js"></script>
-<script>
-    function flowerDailySpecials(id) {
-        console.log(id);
-        var myData = {
-            'id': id,
-            'type' : "Utensils",
-            'mainType': "Puja Essentials"
-        };
-        localStorage.setItem('IDData', JSON.stringify(myData));
-        window.open("../productpage.html", "_top");
-    }
-</script>
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
-        authDomain: "puja-sanskar.firebaseapp.com",
-        databaseURL: "https://puja-sanskar.firebaseio.com",
-        projectId: "puja-sanskar",
-        storageBucket: "puja-sanskar.appspot.com",
-        messagingSenderId: "713940980877",
-        appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
-        measurementId: "G-SFJFNS80VC"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const db = firebase.database();
-</script>
-
-<!-- <script src="../js/adminEssentialsUtensils.js"></script> -->
 
 </body>
 
-</head>
 </html>

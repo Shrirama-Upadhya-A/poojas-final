@@ -11,11 +11,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/product.css" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-storage.js"></script>
+
+</head>
+
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
     <div class="nav-menu fixed-top">
@@ -63,10 +61,10 @@
                         <ol class="breadcrumb-list">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">
-                                <span id = "productTypeName">Prodcut Type Name</span>
+                                Prodcut Type Name
                             </a></li>
                             <li class="breadcrumb-item active">
-                                <span id = "productName">Prodcut Type Name</span>
+                                Product Name
                             </li>
                         </ol>
                     </nav>
@@ -75,24 +73,24 @@
             <div class="grid product">
                 <div class="column-xs-12 column-md-7">
                     <div class="product-gallery">
-                        <div id = "mainImage" class="product-image">
-                            
+                        <div class="product-image">
+                            <img class="active" src="images/5.jpg">
                         </div>
-                        <ul id = "extraImages" class="image-list">
-                            <!-- <li class="image-item"><img src="images/1.jpg"></li>
+                        <ul class="image-list">
+                            <li class="image-item"><img src="images/1.jpg"></li>
                             <li class="image-item"><img src="images/2.jpg"></li>
-                            <li class="image-item"><img src="images/3.jpg"></li> -->
+                            <li class="image-item"><img src="images/3.jpg"></li>
                         </ul>
                     </div>
                 </div>
-                <div id = "productDescription" class="column-xs-12 column-md-5">
-                    <!-- <h1>Flower</h1>
+                <div class="column-xs-12 column-md-5">
+                    <h1>Flower</h1>
                     <h3>&#8377;19.99</h3>
                     <div class="description">
                         <p>The purposes of bonsai are primarily contemplation for the viewer, and the pleasant exercise of effort and ingenuity for the grower.</p>
                         <p>By contrast with other plant cultivation practices, bonsai is not intended for production of food or for medicine. Instead, bonsai practice focuses on long-term cultivation and shaping of one or more small trees growing in a container.</p>
                     </div>
-                    <button class="add-to-cart">Add To Cart</button> -->
+                    <button class="add-to-cart">Add To Cart</button>
                 </div>
             </div>
             <div class="grid related-products">
@@ -198,98 +196,8 @@
     <script src="https://cdn.3up.dk/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/product2.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
-            authDomain: "puja-sanskar.firebaseapp.com",
-            databaseURL: "https://puja-sanskar.firebaseio.com",
-            projectId: "puja-sanskar",
-            storageBucket: "puja-sanskar.appspot.com",
-            messagingSenderId: "713940980877",
-            appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
-            measurementId: "G-SFJFNS80VC"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-        const db = firebase.database();
-    </script>
-    <script>
-        var myData = localStorage['IDData'];
-        console.log(myData);
-        localStorage.removeItem('IDData'); // Clear the localStorage
+    <script src="ja/product.js"></script>
 
-        const iddd = JSON.parse(myData).id;
-        console.log(iddd);
-        var type = JSON.parse(myData).type;
-        var mainType = JSON.parse(myData).mainType;
-        document.getElementById("productTypeName").innerHTML = mainType + " : " + type;
-        
-        
-        if(mainType == "Flowers"){
-                var fbRef = db.ref().child("Products").child("Flowers").child(type);
-                // removed the storage reference
-                fbRef.on("child_added", snap => {
-                    console.log("ID::"+iddd + "::::" +"Snap.key ::" + snap.key);
-                    if (snap.key == iddd) {
-
-                        var name = snap.child("name").val();
-                        var des = snap.child("des").val();
-                        var price = snap.child("price").val();
-                        var code = snap.child("code").val();
-                        var image = snap.child("image").val();
-
-                        document.getElementById("productName").innerHTML = name;
-                        document.getElementById("mainImage").innerHTML = "<img class='active' src="+image+">";
-                        var fff = 0;
-
-                        fbAddressRef = db.ref().child("Products").child("Flowers").child(type).child(iddd).child("Pics");
-                        fbAddressRef.on("child_added", addressSnap => {
-                            
-                            fff++;
-                            if(fff>1){
-                                
-                            console.log(addressSnap);
-                            var image = addressSnap.child("image").val();
-                            document.getElementById("extraImages").innerHTML += "<li class='image-item'><img src="+image+"></li>";
-                            
-                            fff+=1;
-                            }
-                        });
-                        document.getElementById("productDescription").innerHTML += "<h1>"+name+"</h1><h3>&#8377;"+price+"</h3><div class='description'><p>"+des+"</p></div><button class='add-to-cart'>Add To Cart</button>";
-
-                    }
-                    
-                });
-        }
-        if(mainType == "Pandits"){
-            var fbRef = db.ref().child("Products").child("Pandits").child(type);
-            fbRef.on("child_added", snap => {
-                    console.log("ID::"+iddd + "::::" +"Snap.key ::" + snap.key);
-                    if (snap.key == iddd) {
-                        var name = snap.child("name").val();
-                        var des = snap.child("des").val();
-                        var price = snap.child("price").val();
-                        var code = snap.child("code").val();
-                        var image = snap.child("image").val();
-                        
-                        console.log(name);
-                        // fbAddressRef = db.ref().child("Products").child("Pandits").child(type).child(iddd).child("Pics");
-                        // fbAddressRef.on("child_added", addressSnap => {
-                        //     console.log(addressSnap);
-                        //     var image = addressSnap.child("image").val();
-                        //     document.getElementById("FlowerImagesDiv").innerHTML += "<img src=" + image + ">";
-                        // });
-                        document.getElementById("FlowerImagesDiv").innerHTML += "<img src=" + image + ">";
-                        document.getElementById("NameDiv").innerHTML += "<h2>Name:</h2><p>" + name + "</p><h2>Description:</h2><p>" + des + "</p><h2>Cost:</h2> <p>&#8377;" + price + "</p><h2>Images:</h2>";
-
-                    }
-                    
-                });
-        }
-    </script>
 </body>
-</head>
+
 </html>

@@ -54,63 +54,33 @@
             const db = firebase.database();
         </script>
         <script>
-            var myData = localStorage['IDData'];
+            var myData = localStorage['ObjectToPass'];
             console.log(myData);
-            localStorage.removeItem('IDData'); // Clear the localStorage
+            localStorage.removeItem('ObjectToPass'); // Clear the localStorage
 
-            const iddd = JSON.parse(myData).id;
-            console.log(iddd);
-            var type = JSON.parse(myData).type;
-            var mainType = JSON.parse(myData).mainType;
-            if(mainType == "Flowers"){
-                    var fbRef = db.ref().child("Products").child("Flowers").child(type);
-                    // removed the storage reference
-                    fbRef.on("child_added", snap => {
-                        console.log("ID::"+iddd + "::::" +"Snap.key ::" + snap.key);
-                        if (snap.key == iddd) {
-                            var name = snap.child("name").val();
-                            var des = snap.child("des").val();
-                            var price = snap.child("price").val();
-                            var code = snap.child("code").val();
-                            var image = snap.child("image").val();
-                            console.log(name);
-                            fbAddressRef = db.ref().child("Products").child("Flowers").child(type).child(iddd).child("Pics");
-                            fbAddressRef.on("child_added", addressSnap => {
-                                console.log(addressSnap);
-                                var image = addressSnap.child("image").val();
-                                document.getElementById("FlowerImagesDiv").innerHTML += "<img src=" + image + ">";
-                            });
-                            document.getElementById("NameDiv").innerHTML += "<h2>Name:</h2><p>" + name + "</p><h2>Description:</h2><p>" + des + "</p><h2>Cost:</h2> <p>&#8377;" + price + "</p><h2>Images:</h2>";
+            var id = JSON.parse(myData).id;
+            console.log(id);
+            var fbRef = db.ref().child("Products").child("Flowers").child("Subscriptions");
+            // removed the storage reference
+            fbRef.on("child_added", snap => {
+                console.log(id + "::::" + snap.key);
+                if (snap.key == id) {
+                    var name = snap.child("name").val();
+                    var des = snap.child("des").val();
+                    var price = snap.child("price").val();
+                    var id = snap.child("code").val();
+                    console.log(name);
+                    fbAddressRef = db.ref().child("Products").child("Flowers").child("Subscriptions").child(id).child("Pics");
+                    fbAddressRef.on("child_added", addressSnap => {
+                        console.log(addressSnap);
+                        var image = addressSnap.child("image").val();
 
-                        }
-                        
+                        document.getElementById("NameDiv").innerHTML += "<h2>Name:</h2><p>" + name + "</p><h2>Description:</h2><p>" + des + "</p><h2>Cost:</h2> <p>&#8377;" + price + "</p><h2>Images:</h2>";
+                        document.getElementById("FlowerImagesDiv").innerHTML = "<img src=" + image + ">";
                     });
-            }
-            if(mainType == "Pandits"){
-                var fbRef = db.ref().child("Products").child("Pandits").child(type);
-                fbRef.on("child_added", snap => {
-                        console.log("ID::"+iddd + "::::" +"Snap.key ::" + snap.key);
-                        if (snap.key == iddd) {
-                            var name = snap.child("name").val();
-                            var des = snap.child("des").val();
-                            var price = snap.child("price").val();
-                            var code = snap.child("code").val();
-                            var image = snap.child("image").val();
-                            
-                            console.log(name);
-                            // fbAddressRef = db.ref().child("Products").child("Pandits").child(type).child(iddd).child("Pics");
-                            // fbAddressRef.on("child_added", addressSnap => {
-                            //     console.log(addressSnap);
-                            //     var image = addressSnap.child("image").val();
-                            //     document.getElementById("FlowerImagesDiv").innerHTML += "<img src=" + image + ">";
-                            // });
-                            document.getElementById("FlowerImagesDiv").innerHTML += "<img src=" + image + ">";
-                            document.getElementById("NameDiv").innerHTML += "<h2>Name:</h2><p>" + name + "</p><h2>Description:</h2><p>" + des + "</p><h2>Cost:</h2> <p>&#8377;" + price + "</p><h2>Images:</h2>";
-
-                        }
-                        
-                    });
-            }
+                }
+                // $("#tableBody").append("<tr><td data-th='Ref. ID'>"+ id +"</td><td data-th='Name'>"+name+"</td><td data-th='Phone Number'>"+number+"</td><td data-th='Email ID'>"+email+"</td><td data-th='View'><button type='button' style='width: 5vw;' class='btn btn-danger' onClick='myFunction(\""+name+"\",\""+email+"\",\""+id+"\")'>VIEW</button></td></tr>");
+            });
         </script>
         <!-- <script src = "js/adminProductViewPage.js"></script> -->
     </body>
