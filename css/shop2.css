@@ -215,13 +215,11 @@
 .product {
     position: relative;
     perspective: 800px;
-    width: 306px;
+    width: 33%;
     height: 471px;
     transform-style: preserve-3d;
     transition: transform 5s;
     float: left;
-    margin-right: 4vw;
-    margin-left: 3vw;
     -webkit-transition: width 500ms ease-in-out;
     -moz-transition: width 500ms ease-in-out;
     -ms-transition: width 500ms ease-in-out;
@@ -252,9 +250,14 @@
     transform: rotateY( 180deg);
 }
 
+.make3D {
+    box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
+}
+
 .make3D.animate .product-back,
 .make3D.animate .product-front,
 div.large .product-back {
+    box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
     top: 0px;
     left: 0px;
     -webkit-transition: all 100ms ease-out;
