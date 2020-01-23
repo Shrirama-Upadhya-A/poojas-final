@@ -803,12 +803,12 @@ a {
 
 .product footer.content {
     height: 50px;
-    margin: 6px 0 0 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
 .product footer .price {
-    background: #a5a5a5;
+    background: #d3d3d3;
     color: #000;
     float: right;
     font-size: 15px;
@@ -856,13 +856,12 @@ a {
 
 .qt-plus,
 .qt-minus {
-    background: #a5a5a5;
+    background: #d3d3d3;
     border: none;
     font-size: 30px;
     font-weight: 300;
     height: 100%;
     box-shadow: 0px 1px 1px 1px;
-    border-radius: 100%;
     padding: 0 20px;
     -webkit-transition: background.2s linear;
     -moz-transition: background .2s linear;
@@ -895,7 +894,7 @@ a {
 }
 
 #site-footer h1 {
-    background: #a5a5a5;
+    background: #d3d3d3;
     border: 1px solid #ccc;
     border-style: none none solid none;
     font-size: 24px;
@@ -926,7 +925,7 @@ a {
 }
 
 .type {
-    background: #a5a5a5;
+    background: #d3d3d3;
     font-size: 13px;
     padding: 10px 16px;
     left: 100%;
