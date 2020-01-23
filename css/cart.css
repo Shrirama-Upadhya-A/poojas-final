@@ -657,20 +657,6 @@ a {
     margin: 0;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    -webkit-transition: color .2s linear;
-    -moz-transition: color .2s linear;
-    -ms-transition: color .2s linear;
-    -o-transition: color .2s linear;
-    transition: color .2s linear;
-}
-
-a:hover {
-    color: #ac0401;
-}
-
 #site-header h1 span {
     color: #ac0401;
 }
@@ -782,7 +768,7 @@ a:hover {
     font-weight: 300;
     line-height: 49px;
     margin: 0;
-    padding: 0 30px;
+    padding: 0 5px;
     position: absolute;
     bottom: -50px;
     right: 0;
