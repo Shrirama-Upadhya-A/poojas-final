@@ -334,12 +334,14 @@ a {
 
 .product-quantity {
     float: left;
-    width: 11%;
+    width: 9%;
+    text-align: center;
 }
 
 .product-removal {
     float: left;
-    width: 5%;
+    text-align: center;
+    width: 8%;
 }
 
 .product-line-price {
