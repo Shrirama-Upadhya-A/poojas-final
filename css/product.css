@@ -707,9 +707,6 @@ footer {
 .product-image {
     display: none;
     width: 90%;
-    margin: auto;
-    padding-left: 2vw;
-    padding-right: 2vw;
     height: auto;
 }
 
@@ -719,7 +716,6 @@ footer {
 
 .image-list {
     display: block;
-    margin: auto;
     margin-top: 10vh;
     width: 100%;
 }
