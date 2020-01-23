@@ -341,13 +341,13 @@ a {
 .product-removal {
     float: left;
     text-align: center;
-    width: 12%;
+    width: 16%;
 }
 
 .product-line-price {
     float: left;
     font-family: bfont;
-    width: 9%;
+    width: 5%;
     text-align: right;
 }
 
