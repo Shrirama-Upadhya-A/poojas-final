@@ -706,9 +706,8 @@ footer {
 
 .product-image {
     display: none;
-    width: 90%;
+    width: 80%;
     padding-right: 2vw;
-    height: auto;
 }
 
 .image-list li {
