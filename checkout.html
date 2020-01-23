@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Puja Sanskar | Checkout</title>
+    <link rel="shortcut icon" href="images/icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/cart.css" rel="stylesheet">
+    <link href="css/checkout.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+        <section id="navbar" class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="index.html">
+                        <img class="logo" src="images/logo.png">
+                    </a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="flowers-subscription.html">Puja Flowers</a>
+                        </li>
+                        <li>
+                            <a href="puja-essentials.html">Puja Essentials</a>
+                        </li>
+                        <li>
+                            <a href="pundits.html">Puja Pundits</a>
+                        </li>
+
+                        <li>
+                            <a href="signup.html"> <i class="fa fa-user"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- shopping-cart -->
+
+        <div class="shopping-cart">
+            <div class="shopping-cart-header">
+                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                <div class="shopping-cart-total">
+                    <span class="lighter-text">Total:</span>
+                    <span class="main-color-text">$2,229.97</span>
+                </div>
+            </div>
+
+            <ul class="shopping-cart-items">
+                <div class="clearfix">
+                    <img src="images/5.jpg" alt="item" />
+                    <span class="item-name">Product</span>
+                    <span class="item-price">&#8377;849.99</span>
+                </div>
+
+                <div class="clearfix">
+                    <img src="images/1.jpg" alt="item" />
+                    <span class="item-name">Product</span>
+                    <span class="item-price">&#8377;849.99</span>
+                </div>
+                <div class="clearfix">
+                    <img src="images/1.jpg" alt="item" />
+                    <span class="item-name">Product</span>
+                    <span class="item-price">&#8377;849.99</span>
+                </div>
+
+            </ul>
+
+            <a href="#" class="button">Checkout</a>
+        </div>
+        <!--end shopping-cart -->
+
+
+        <div id="app" v-cloak>
+            <div class="header">
+
+                <div class="progress-container hide-on-med-and-up">
+                    <div class="progress-bar js-progress-bar"></div>
+                </div>
+            </div>
+            <div class="container wrapper">
+                <div class="row hide-on-med-and-up" v-cloak>
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content">
+                                <p><b>Items in cart:</b> {{cartSummary.length}}</p>
+                                <p><b>Shipping:</b> {{chosenShippingMethod.name}} - ${{shippingPrice}}</p>
+                                <p><b>Total:</b> ${{basketTotal}}</p>
+                                <span class="small-text grey-text text-darken-2 m-top-10 ">Fill out the information below and go directly to payment by clicking the button.</span>
+                            </div>
+                            <a v-on:click="scrollToBottom(); $v.name.$touch(); $v.address.$touch(); $v.email.$touch(); $v.phone.$touch();" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">arrow_downward
+          </i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card" id="step-1">
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4"><b>Information</b></span>
+                                <div class="row m-top-15">
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12 l6 m-top-15">
+                                                <input id="first_name" @blur="$v.name.$touch()" :class="{'invalid': $v.name.$error}" v-model="name" type="text" autocomplete="name">
+                                                <label for="first_name">Full name</label>
+                                                <span v-if="$v.name.$error" class="helper-text" data-error="Please fill out full name">Helper text</span>
+
+                                            </div>
+                                            <div class="input-field col s12 l6 m-top-15">
+                                                <input id="company" v-on:blur="setCompanyShipping" v-model="company" type="text" class="validate">
+                                                <label for="company">Company (optional)</label>
+                                            </div>
+                                        </div>
+                                        <div class="row m-top-15">
+                                            <div class="input-field col s12 autocomplete-container">
+                                                <input class="js-autocomplete-input" id="dawa-autocomplete-input" @blur="$v.address.$touch()" :class="{'invalid': $v.address.$error}" v-model="addressInput" type="url" class="validate" autocomplete="false">
+                                                <label for="dawa-autocomplete-input">Full address</label>
+                                                <span v-if="$v.address.$error" class="helper-text" data-error="Please fill out full address">Helper text</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12 l6 m-top-15">
+                                                <input @blur="$v.email.$touch()" :class="{'invalid': $v.email.$error}" id="email" v-model="email" type="text" class="validate" autocomplete="email">
+                                                <label for="email">Email</label>
+                                                <span v-if="$v.email.$error" class="helper-text" data-error="Please fill out email">Helper text</span>
+                                            </div>
+                                            <div class="input-field col s12 l6 m-top-15">
+                                                <input @blur="$v.phone.$touch()" :class="{'invalid': $v.phone.$error}" id="phone" v-model="phone" type="text" class="validate" autocomplete="tel">
+                                                <label for="phone">Phone
+                              </label>
+                                                <span v-if="$v.phone.$error" class="helper-text" data-error="Please fill out phone">Helper text</span>
+                                            </div>
+                                        </div>
+                                        <label class="d-block m-top-15">
+                            <input type="checkbox" v-model="showAlternative" class="filled-in" />
+                            <span>Choose alternative delivery</span>
+                          </label>
+
+                                        <div v-if="showAlternative" class="m-top-15">
+                                            <div class="row m-top-15" v-if="showAlternative">
+                                                <div class="input-field col s12 l6">
+                                                    <input id="del_first_name" v-model="delName" type="text" class="validate">
+                                                    <label for="del_first_name">Full name</label>
+                                                </div>
+                                                <div class="input-field col s12 l6">
+                                                    <input id="del_company" v-model="delCompany" type="text" class="validate">
+                                                    <label for="del_company">Company (optional)</label>
+                                                </div>
+                                            </div>
+                                            <div class="row m-top-15">
+                                                <div class="input-field col s12 autocomplete-container">
+                                                    <input class="autocomplete" id="del_address" class="validate" v-model="delAddressInput" type="text" class="validate" autocomplete="shipping street-address">
+                                                    <label for="del_address">Full address</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="step-2" v-cloak>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4"><b>Shipping</b></span>
+                                <p>Pleasse choose your desired shipping provider.</p>
+                                <form action="#">
+                                    <p class="p-top-10" v-for="(shippingMethod, index) in shippingMethods">
+                                        <label>
+                            <input v-model="shipping" name="group1" :value="shippingMethod.id" type="radio" :id="shippingMethod.id" class="with-gap m-top-15" />
+                            <span>{{shippingMethod.desc}} - ${{shippingMethod.price}}</span>
+                          </label>
+                                    </p>
+                                </form>
+                                <span class="card-title activator grey-text text-darken-4 m-top-15 p-top-10"><b>Voucher</b></span>
+                                <label v-if="!showVoucher" class="d-block m-top-15">
+                            <input type="checkbox" v-model="showVoucher" class="filled-in" />
+                            <span>I have a voucher code</span>
+                          </label>
+                                <div v-if="showVoucher" class="row m-top-10 p-top-10">
+                                    <div class="input-field col s12 l6">
+                                        <input id="voucher" type="text" class="validate">
+                                        <label for="voucher">Voucher</label>
+                                    </div>
+                                    <div class="col s12 l6">
+                                        <a class="waves-effect waves-light btn indigo darken-4 m-top-10">Add voucher</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card" id="step-4" v-cloak>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4"><b>Order summary</b></span>
+                                <div class="row info">
+                                    <div class="col s12 m6">
+                                        <p><b>Billing address:</b></p>
+                                        <p>{{ name }}</p>
+                                        <p>{{ company }}</p>
+                                        <p>{{ addressComputed }}</p>
+                                        <p>{{ cityComputed }}</p>
+                                        <p>{{ email }}</p>
+                                        <p>{{ phone }}</p>
+                                    </div>
+                                    <div class="col s12 m6" v-if="showAlternative">
+                                        <p><b>Delivery address:</b></p>
+                                        <p>{{ delName }}</p>
+                                        <p>{{ delCompany }}</p>
+                                        <p>{{ delAddressComputed }}</p>
+                                        <p>{{ delCityComputed }}</p>
+                                    </div>
+                                </div>
+                                <span class="card-title activator grey-text text-darken-4 m-top-15"><b>Your order</b></span>
+                                <span><b>{{ products.length }} items</b></span>
+                                <ul class="collection">
+                                    <li class="collection-item avatar" ref="item-1" v-for="(product, index) in products">
+                                        <img :src="product.image" alt="" class="circle">
+                                        <div class="row">
+                                            <div class="col s12 l4">
+                                                <span class="title">{{ product.name }}</span>
+                                                <p>${{ product.price }}</p>
+                                            </div>
+                                            <div class="input-field col s6 l2">
+                                                <select>
+                                  <option value="" disabled>Size</option>
+                                  <option v-for="(size, index) in sizes" :value="size" :selected="index == 2 ? 'selected' : ''">{{size}}</option>
+                                </select>
+                                            </div>
+                                            <div class="input-field col s6 l2">
+                                                <quantity-select :product-id="product.id"></quantity-select>
+                                            </div>
+                                        </div>
+                                        <a href="#!" class="secondary-content"><i class="material-icons" v-on:click="deleteItem(product.id)">clear</i></a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li v-if="shipping">
+                                        <span><b>Shipping</b> <i>{{chosenShippingMethod.desc}}</i></span>
+                                        <span class="right">${{chosenShippingMethod.price}}</span>
+                                    </li>
+                                    <li v-if="taxTotal">
+                                        <span><b>TAX</b></span>
+                                        <span class="right">${{taxTotal}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-action" v-if="basketTotal">
+                                <span><b>Total</b></span>
+                                <span class="right"><b>${{basketTotal}}</b></span>
+                            </div>
+                            <div class="card-action">
+                                <span class="card-title activator grey-text text-darken-4"><b>Payment</b></span>
+                                <p class="payment-info">Please choose your desired payment method. Credit card option will redirect you to the payment gateway.</p>
+                                <p>
+                                    <label>
+                            <input type="checkbox"  class="filled-in" />
+                            <span>Please sign me up for the newsletter</span>
+                        </label></p>
+                                <p>
+                                    <label>
+                            <input type="checkbox" v-model="consent" class="filled-in" />
+                            <span>I hereby confirm that the information that I have provided is correct and that I accept the <a href="#" class="indigo-text text-darken-4">Terms and Conditions</a></span>
+                        </label></p>
+
+                                <a ref="link" v-on:click="goToPayment($event); $v.$touch();" href="https://mobilepay.dk/da-dk/pages/betal.aspx?phone=004512345678&amount=199" class="mobilepay">
+                                    <img src="https://cdn.mobilepay.dk/res-website/img/buttons/paywith/dk/mpblue/medium.svg" alt="" class="src">
+                                </a>
+                                <a ref="link" v-on:click="goToPayment($event); $v.$touch();" href="https://payment.quickpay.net/payments/a4d5e59b2695e3b5c2d8b19c8112835a5e0c3365e0782a4fb7b43091b5142af9" class="waves-effect waves-light btn-credit-card blue-grey"><i class="material-icons left">credit_card</i>Pay with Credit Card</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Site footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <h6>INFORMATION</h6>
+                        <p class="text-justify">
+                            902, Puja Sanskar, Shri Krishna Building<br> New Link Road,<br> Opp. Laxmi Industrial Estate,<br> Andheri West, Mumbai,<br> Maharashtra - 400053<br><br>
+                            <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
+                                <i class="fa fa-envelope">
+                                </i>&nbsp;&nbsp; info@pujasanskar.com
+                            </a><br>
+                            <a href="mailto:info@pujasanskar.com?Subject=Enquiry">
+                                <i class="fa fa-phone">
+                                </i>&nbsp;&nbsp; +91 1234567891
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>QUICK LINKS</h6>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="flowers-subscription.html">Puja Flowers</a></li>
+                            <li><a href="puja-essentials.html">Puja Essentials</a></li>
+                            <li><a href="pundits.html">Puja Pundits</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="app" class="col-xs-6 col-md-5">
+                        <h6>CONNECT WITH US</h6>
+                        <ul class="footer-links">
+                            <p>Download Our Puja Sanskar App Now</p>
+                        </ul>
+
+                        <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank">
+                            <img style="width:170px;padding:2px;" src="images/gplay.png" alt="playstore_link"></a>
+
+                        <a href="https://play.google.com/store/apps/details?id=e.dell.foodcamp&pageId=none" target="_blank">
+                            <img style="width:170px;padding:2px;" src="images/astore.png" alt="playstore_link"></a>
+
+                        <div class="social-container">
+                            <div class="social-icons">
+                                <li>
+                                    <a href="https://www.facebook.com/adroitalliance/" target="_blank">
+                                        <j class="fa fa-facebook"></j>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.twitter.com/adroitalliance/" target="_blank">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/adroitalliance/" target="_blank">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/adroitalliance/" target="_blank">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/adroitalliance/" target="_blank">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+                                </li>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | Powered by <a style="color: #ffef10;" href="http://www.adroitalliance.in" target="_blank">ADROIT ALLIANCE</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+        <script src="https://dawa.aws.dk/js/autocomplete/dawa-autocomplete2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
+        <script src="https://unpkg.com/vuelidate@0.6.2/dist/vuelidate.min.js"></script>
+        <script src="https://unpkg.com/vuelidate@0.6.2/dist/validators.min.js"></script>
+
+        <script src="https://cdn.3up.dk/jquery@3.3.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.3up.dk/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/checkout.js"></script>
+
+    </body>
+</head>
+
+</html>
