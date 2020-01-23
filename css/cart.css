@@ -351,6 +351,12 @@ a {
     text-align: right;
 }
 
+.column-labels .product-price,
+.column-labels .product-quantity,
+.column-labels .product-line-price {
+    color: #ac0401;
+}
+
 .group:before,
 .shopping-cart:before,
 .column-labels:before,
