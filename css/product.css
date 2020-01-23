@@ -714,6 +714,16 @@ footer {
     margin: 0;
 }
 
+.image-list img {
+    border: 1px solid black;
+    box-shadow: black;
+}
+
+.product-image img.active {
+    border: 1px solid black;
+    box-shadow: black;
+}
+
 @media (min-width: 62rem) {
     .product-image img,
     .image-list img {
@@ -744,7 +754,6 @@ footer {
         height: 10rem;
         width: 100%;
         transition: opacity 0.3s ease;
-        cursor: pointer;
     }
     .image-list img:hover {
         opacity: 0.7;
