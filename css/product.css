@@ -706,8 +706,10 @@ footer {
 
 .product-image {
     display: none;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    padding-left: 2vw;
+    padding-right: 2vw;
     height: auto;
 }
 
