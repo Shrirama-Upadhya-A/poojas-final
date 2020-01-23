@@ -959,3 +959,11 @@ label {
     background-size: 400%;
     transition: background-color 300ms ease-in-out;
 }
+
+.product-quantity input {
+    border-color: #ac0401;
+}
+
+.product-quantity input:focus {
+    border-color: #ac0401;
+}
