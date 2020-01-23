@@ -706,12 +706,18 @@ footer {
 
 .product-image {
     display: none;
-    width: 40vw;
+    width: 100%;
     height: auto;
 }
 
 .image-list li {
-    margin: 0;
+    margin: 10px;
+}
+
+.image-list {
+    display: block;
+    margin: auto;
+    width: 50%;
 }
 
 .image-list img {
@@ -741,10 +747,11 @@ footer {
     }
     .image-list {
         display: flex;
+        width: 70%;
         overflow: hidden;
     }
     .image-list li {
-        margin: 0 0.75rem 0 0;
+        margin: 0 0.75rem 0.75rem 0;
         flex-basis: 100%;
     }
     .image-list li:nth-child(3) {
@@ -752,7 +759,6 @@ footer {
     }
     .image-list img {
         height: 10rem;
-        width: 100%;
         transition: opacity 0.3s ease;
     }
     .image-list img:hover {
