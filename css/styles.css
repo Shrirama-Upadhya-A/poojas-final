@@ -4015,3 +4015,7 @@ nav#sidebar-nav ul li a:hover:after {
         border-radius: 0;
     }
 }
+
+.navigation {
+    z-index: 20000;
+}

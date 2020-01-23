@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/cart.css" rel="stylesheet">
+
     <link href="css/style.css" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
@@ -41,17 +43,50 @@
                         </li>
 
                         <li>
-                            <a href="cart.html"> <i class="fa fa-shopping-cart"></i>
-                            </a>
-                        </li>
-
-                        <li>
                             <a href="signup.html"> <i class="fa fa-user"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </section>
+
+        <!-- shopping-cart -->
+
+        <div class="shopping-cart">
+            <div class="shopping-cart-header">
+                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                <div class="shopping-cart-total">
+                    <span class="lighter-text">Total:</span>
+                    <span class="main-color-text">$2,229.97</span>
+                </div>
+            </div>
+
+            <ul class="shopping-cart-items">
+                <div class="clearfix">
+                    <img src="images/5.jpg" alt="item" />
+                    <span class="item-name">Product</span>
+                    <span class="item-price">&#8377;849.99</span>
+                </div>
+
+                <div class="clearfix">
+                    <img src="images/1.jpg" alt="item" />
+                    <span class="item-name">Product</span>
+                    <span class="item-price">&#8377;849.99</span>
+                </div>
+                <div class="clearfix">
+                    <img src="images/1.jpg" alt="item" />
+                    <span class="item-name">Product</span>
+                    <span class="item-price">&#8377;849.99</span>
+                </div>
+
+            </ul>
+
+            <a href="#" class="button">Checkout</a>
+        </div>
+        <!--end shopping-cart -->
 
         <header style="text-align:left;" class="bg-gradient" id="home">
             <div class="container">
@@ -412,6 +447,8 @@
             <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
             <script src="js/nav.js"></script>
+            <script src="js/cart.js"></script>
+
 
             <script>
                 // Your web app's Firebase configuration

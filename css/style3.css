@@ -68,6 +68,10 @@
     src: url(Kruti-Regular.ttf);
 }
 
+.navigation {
+    z-index: 20000;
+}
+
 .light-font {
     font-weight: 300;
 }

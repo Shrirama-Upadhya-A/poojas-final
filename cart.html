@@ -19,7 +19,7 @@
     <section id="navbar" class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href="#!">
+                <a href="index.html">
                     <img class="logo" src="images/logo.png">
                 </a>
             </div>
@@ -37,140 +37,56 @@
                     </li>
 
                     <li>
-                        <a href="cart.html"> <i class="fa fa-shopping-cart"></i>
-
-                        </a>
-                    </li>
-
-                    <li>
                         <a href="signup.html"> <i class="fa fa-user"></i></a>
                     </li>
+                    <li>
+                        <a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>
+                    </li>
+
                 </ul>
             </nav>
         </div>
     </section>
 
-    <header id="site-header">
-        <h1 style="text-align:left;padding-left:5%;text-decoration:underline;text-decoration-color:black;color:#ac0401;font-family:flfont;">Shopping Cart</h1 s>
-    </header>
 
-    <div class="billing">
+    <!-- shopping-cart -->
 
-        <section id="cart">
-            <article class="product">
-                <header>
-                    <a class="remove">
-                        <img src="images/1.jpg" alt="">
-                        <h3>Remove product</h3>
-                    </a>
-                </header>
-
-                <div class="content">
-                    <h1>Product Name</h1>
-                    Transforming a classic colorway into a Transforming a classic colorway into an Air Jordan 10 “Teal Graffiti” Custom that sports an Air Tech Challenge-inspired print throughout the upper, complementing the Graffiti print. Transforming a classic colorway
-                </div>
-
-                <footer class="content">
-                    <span class="qt-minus">-</span>
-                    <span class="qt">2</span>
-                    <span class="qt-plus">+</span>
-
-                    <h2 class="full-price">
-                        69.98
-                    </h2>
-
-                    <h2 class="price">
-                        34.99
-                    </h2>
-                </footer>
-            </article>
-
-            <article class="product">
-                <header>
-                    <a class="remove">
-                        <img src="images/2.jpg" alt="">
-
-                        <h3>Remove product</h3>
-                    </a>
-                </header>
-
-                <div class="content">
-
-                    <h1>Product Name</h1>
-
-                    Air Jordan 5 “Noah’s Ark” is certainly one of the most amazing customs he has ever created. The sneaker is inspired by the events within the story of Noah’s Ark, utilizing various animal prints.
-
-                </div>
-
-                <footer class="content">
-
-                    <span class="qt-minus">-</span>
-                    <span class="qt">1</span>
-                    <span class="qt-plus">+</span>
-
-                    <h2 class="full-price">
-                        79.99
-                    </h2>
-
-                    <h2 class="price">
-                        79.99
-                    </h2>
-                </footer>
-            </article>
-
-            <article class="product">
-                <header>
-                    <a class="remove">
-                        <img src="images/5.jpg" alt="">
-
-                        <h3>Remove product</h3>
-                    </a>
-                </header>
-
-                <div class="content">
-
-                    <h1>Product Name</h1>
-
-                    The custom transforms the original Crimson base into a well received custom viewable above so take a look at the Product Name and inquire for your own pair.
-
-                </div>
-
-                <footer class="content">
-
-                    <span class="qt-minus">-</span>
-                    <span class="qt">3</span>
-                    <span class="qt-plus">+</span>
-
-                    <h2 class="full-price">
-                        53.99
-                    </h2>
-
-                    <h2 class="price">
-                        17.99
-                    </h2>
-                </footer>
-            </article>
-
-        </section>
-
-    </div>
-
-    <footer id="site-footer">
-        <div class="container clearfix">
-
-            <div class="left">
-                <h2 class="subtotal">Subtotal: <span>163.96</span>&#8377;</h2>
-                <h3 class="tax">Taxes (5%): <span>8.2</span>&#8377;</h3>
-                <h3 class="shipping">Shipping: <span>5.00</span>&#8377;</h3>
+    <div class="shopping-cart">
+        <div class="shopping-cart-header">
+            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+            <div class="shopping-cart-total">
+                <span class="lighter-text">Total:</span>
+                <span class="main-color-text">$2,229.97</span>
             </div>
-
-            <div class="right">
-                <h1 class="total">Total: <span>177.16</span>&#8377;</h1>
-                <a class="button">Checkout</a>
-            </div>
-
         </div>
-    </footer>
+
+        <ul class="shopping-cart-items">
+            <div class="clearfix">
+                <img src="images/5.jpg" alt="item" />
+                <span class="item-name">Product</span>
+                <span class="item-price">&#8377;849.99</span>
+            </div>
+
+            <div class="clearfix">
+                <img src="images/1.jpg" alt="item" />
+                <span class="item-name">Product</span>
+                <span class="item-price">&#8377;849.99</span>
+            </div>
+            <div class="clearfix">
+                <img src="images/1.jpg" alt="item" />
+                <span class="item-name">Product</span>
+                <span class="item-price">&#8377;849.99</span>
+            </div>
+
+        </ul>
+
+        <a href="#" class="button">Checkout</a>
+    </div>
+    <!--end shopping-cart -->
+
+
+
+
     <!-- Site footer -->
     <footer class="site-footer">
         <div class="container">

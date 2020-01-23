@@ -11,6 +11,10 @@
     padding-bottom: 7vh;
 }
 
+.navigation {
+    z-index: 20000;
+}
+
 #grid,
 #grid1,
 #grid2,

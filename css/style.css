@@ -1080,6 +1080,10 @@
     /*END FOOTER*/
     /*FAQ*/
     
+    .navigation {
+        z-index: 20000;
+    }
+    
     .faq-nav {
         flex-direction: column;
         margin: 0 0 32px;
