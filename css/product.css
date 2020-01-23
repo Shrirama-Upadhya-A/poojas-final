@@ -720,12 +720,13 @@ footer {
 .image-list {
     display: block;
     margin: auto;
+    margin-top: 10vh;
     width: 100%;
 }
 
 .image-list img {
-    box-shadow: 0px 5px 15px -1px rgb(196, 196, 196);
     border-radius: 20px;
+    border: 1px solid black;
 }
 
 .product-image img.active {
