@@ -329,17 +329,17 @@ a {
 .product-price {
     float: left;
     font-family: bfont;
-    width: 12%;
+    width: 10%;
 }
 
 .product-quantity {
     float: left;
-    width: 10%;
+    width: 15%;
 }
 
 .product-removal {
     float: left;
-    width: 9%;
+    width: 5%;
 }
 
 .product-line-price {
@@ -471,13 +471,13 @@ label {
 .totals .totals-item label {
     float: left;
     clear: both;
-    width: 79%;
+    width: 90%;
     text-align: right;
 }
 
 .totals .totals-item .totals-value {
     float: right;
-    width: 21%;
+    width: 10%;
     text-align: right;
     font-family: bfont;
 }
