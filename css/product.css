@@ -706,7 +706,8 @@ footer {
 
 .product-image {
     display: none;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     height: auto;
 }
 
@@ -717,7 +718,7 @@ footer {
 .image-list {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 100%;
 }
 
 .image-list img {
