@@ -712,6 +712,7 @@ footer {
 
 .image-list li {
     margin: 10px;
+    width: 100%;
 }
 
 .image-list {
@@ -722,6 +723,7 @@ footer {
 
 .image-list img {
     border-radius: 20px;
+    width: 100%;
     border: 1px solid black;
 }
 
@@ -747,7 +749,7 @@ footer {
     }
     .image-list {
         display: flex;
-        width: 70%;
+        width: 85%;
         overflow: hidden;
     }
     .image-list li {
