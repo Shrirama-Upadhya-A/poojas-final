@@ -372,7 +372,7 @@ div.large .make3D {
 }
 
 .stats-container .product_name {
-    font-size: 18px;
+    font-size: 20px;
     color: #ac0401;
     font-weight: 700;
 }
@@ -386,7 +386,7 @@ div.large .make3D {
 .stats-container .product_price {
     float: right;
     color: #ac0401;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
 }
 
