@@ -50,74 +50,129 @@
         </div>
     </section>
 
-    <div class="cartcontain spacing2">
-        <h2 style="padding:5vh;">Shopping Cart</h2>
-
-        <div class="shopping-cart">
-
-            <div class="column-labels">
-                <label class="product-image">Image</label>
-                <label class="product-details">Product</label>
-                <label class="product-price">Price</label>
-                <label class="product-quantity">Quantity</label>
-                <label class="product-removal">Remove</label>
-                <label class="product-line-price">Total</label>
-            </div>
-
-            <div class="product">
-                <div class="product-image">
-                    <img src="images/5.jpg">
-                </div>
-                <div class="product-details">
-                    <div class="product-title">Product Name 1</div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adistinctio qui quos maiores et, facilis eaque expedita!
-                    </p>
-                </div>
-                <div class="product-price">12.99</div>
-                <div class="product-quantity">
-                    <input type="number" value="2" min="1">
-                </div>
-                <div class="product-removal">
-                    <button class="remove-product button">
-                        Remove
-      </button>
-                </div>
-                <div class="product-line-price">25.98</div>
-            </div>
-
-            <div class="product">
-                <div class="product-image">
-                    <img src="images/1.jpg">
-                </div>
-                <div class="product-details">
-                    <div class="product-title">Product Name 2</div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adistinctio qui quos maiores et, facilis eaque expedita!
-                    </p>
-                </div>
-                <div class="product-price">45.99</div>
-                <div class="product-quantity">
-                    <input type="number" value="1" min="1">
-                </div>
-                <div class="product-removal">
-                    <button class="remove-product button">
-        Remove
-      </button>
-                </div>
-                <div class="product-line-price">45.99</div>
-            </div>
-
-            <div class="totals">
-                <div class="totals-item totals-item-total">
-                    <label>Grand Total</label>
-                    <div class="totals-value" id="cart-total">90.57</div>
-                </div>
-            </div>
-
-            <button style="margin:0px;float:right" class="button">Checkout</button>
-
+    <header id="site-header">
+        <div class="container">
+            <h1 style="text-decoration:underline;text-decoration-color:black;color:#ac0401;font-family:flfont;">Shopping Cart</h1 s>
         </div>
+    </header>
+
+    <div class="container">
+
+        <section id="cart">
+            <article class="product">
+                <header>
+                    <a class="remove">
+                        <img src="images/1.jpg" alt="">
+                        <h3>Remove product</h3>
+                    </a>
+                </header>
+
+                <div class="content">
+                    <h1>Product Name</h1>
+                    Transforming a classic colorway into an Air Jordan 10 “Teal Graffiti” Custom that sports an Air Tech Challenge-inspired print throughout the upper, complementing the Graffiti print.
+                </div>
+
+                <footer class="content">
+                    <span class="qt-minus">-</span>
+                    <span class="qt">2</span>
+                    <span class="qt-plus">+</span>
+
+                    <h2 class="full-price">
+                        69.98
+                    </h2>
+
+                    <h2 class="price">
+                        34.99
+                    </h2>
+                </footer>
+            </article>
+
+            <article class="product">
+                <header>
+                    <a class="remove">
+                        <img src="images/2.jpg" alt="">
+
+                        <h3>Remove product</h3>
+                    </a>
+                </header>
+
+                <div class="content">
+
+                    <h1>Product Name</h1>
+
+                    Air Jordan 5 “Noah’s Ark” is certainly one of the most amazing customs he has ever created. The sneaker is inspired by the events within the story of Noah’s Ark, utilizing various animal prints.
+
+                </div>
+
+                <footer class="content">
+
+                    <span class="qt-minus">-</span>
+                    <span class="qt">1</span>
+                    <span class="qt-plus">+</span>
+
+                    <h2 class="full-price">
+                        79.99
+                    </h2>
+
+                    <h2 class="price">
+                        79.99
+                    </h2>
+                </footer>
+            </article>
+
+            <article class="product">
+                <header>
+                    <a class="remove">
+                        <img src="images/5.jpg" alt="">
+
+                        <h3>Remove product</h3>
+                    </a>
+                </header>
+
+                <div class="content">
+
+                    <h1>Product Name</h1>
+
+                    The custom transforms the original Crimson base into a well received custom viewable above so take a look at the Product Name and inquire for your own pair.
+
+                </div>
+
+                <footer class="content">
+
+                    <span class="qt-minus">-</span>
+                    <span class="qt">3</span>
+                    <span class="qt-plus">+</span>
+
+                    <h2 class="full-price">
+                        53.99
+                    </h2>
+
+                    <h2 class="price">
+                        17.99
+                    </h2>
+                </footer>
+            </article>
+
+        </section>
+
     </div>
 
+    <footer id="site-footer">
+        <div class="container clearfix">
+
+            <div class="left">
+                <h2 class="subtotal">Subtotal: <span>163.96</span>&#8377;</h2>
+                <h3 class="tax">Taxes (5%): <span>8.2</span>&#8377;</h3>
+                <h3 class="shipping">Shipping: <span>5.00</span>&#8377;</h3>
+            </div>
+
+            <div class="right">
+                <h1 class="total">Total: <span>177.16</span>&#8377;</h1>
+                <a class="button">Checkout</a>
+            </div>
+
+        </div>
+    </footer>
     <!-- Site footer -->
     <footer class="site-footer">
         <div class="container">

@@ -1,74 +1,98 @@
-/* Set rates + misc */
-var taxRate = 0.05;
-var shippingRate = 15.00;
-var fadeTime = 300;
+var check = false;
+
+function changeVal(el) {
+    var qt = parseFloat(el.parent().children(".qt").html());
+    var price = parseFloat(el.parent().children(".price").html());
+    var eq = Math.round(price * qt * 100) / 100;
+
+    el.parent().children(".full-price").html(eq);
 
 
-/* Assign actions */
-$('.product-quantity input').change(function() {
-    updateQuantity(this);
-});
 
-$('.product-removal button').click(function() {
-    removeItem(this);
-});
+    changeTotal();
+
+}
 
 
-/* Recalculate cart */
-function recalculateCart() {
-    var subtotal = 0;
 
-    /* Sum up row totals */
-    $('.product').each(function() {
-        subtotal += parseFloat($(this).children('.product-line-price').text());
+function changeTotal() {
+
+
+
+    var price = 0;
+
+    $(".full-price").each(function(index) {
+        price += parseFloat($(".full-price").eq(index).html());
     });
 
-    /* Calculate totals */
-    var tax = subtotal * taxRate;
-    var shipping = (subtotal > 0 ? shippingRate : 0);
-    var total = subtotal + tax + shipping;
+    price = Math.round(price * 100) / 100;
+    var tax = Math.round(price * 0.05 * 100) / 100
+    var shipping = parseFloat($(".shipping span").html());
+    var fullPrice = Math.round((price + tax + shipping) * 100) / 100;
 
-    /* Update totals display */
-    $('.totals-value').fadeOut(fadeTime, function() {
-        $('#cart-subtotal').html(subtotal.toFixed(2));
-        $('#cart-tax').html(tax.toFixed(2));
-        $('#cart-shipping').html(shipping.toFixed(2));
-        $('#cart-total').html(total.toFixed(2));
-        if (total == 0) {
-            $('.checkout').fadeOut(fadeTime);
-        } else {
-            $('.checkout').fadeIn(fadeTime);
+    if (price == 0) {
+        fullPrice = 0;
+    }
+
+    $(".subtotal span").html(price);
+    $(".tax span").html(tax);
+    $(".total span").html(fullPrice);
+}
+
+$(document).ready(function() {
+
+    $(".remove").click(function() {
+        var el = $(this);
+        el.parent().parent().addClass("removed");
+        window.setTimeout(
+            function() {
+                el.parent().parent().slideUp('fast', function() {
+                    el.parent().parent().remove();
+                    if ($(".product").length == 0) {
+                        if (check) {
+                            $("#cart").html("<h1>The shop does not function, yet!</h1><p>If you liked my shopping cart, please take a second and heart this Pen on <a href='https://codepen.io/ziga-miklic/pen/xhpob'>CodePen</a>. Thank you!</p>");
+                        } else {
+                            $("#cart").html("<h1>No products!</h1>");
+                        }
+                    }
+                    changeTotal();
+                });
+            }, 200);
+    });
+
+    $(".qt-plus").click(function() {
+        $(this).parent().children(".qt").html(parseInt($(this).parent().children(".qt").html()) + 1);
+
+        $(this).parent().children(".full-price").addClass("added");
+
+        var el = $(this);
+        window.setTimeout(function() {
+            el.parent().children(".full-price").removeClass("added");
+            changeVal(el);
+        }, 150);
+    });
+
+    $(".qt-minus").click(function() {
+
+        child = $(this).parent().children(".qt");
+
+        if (parseInt(child.html()) > 1) {
+            child.html(parseInt(child.html()) - 1);
         }
-        $('.totals-value').fadeIn(fadeTime);
+
+        $(this).parent().children(".full-price").addClass("minused");
+
+        var el = $(this);
+        window.setTimeout(function() {
+            el.parent().children(".full-price").removeClass("minused");
+            changeVal(el);
+        }, 150);
     });
-}
 
+    window.setTimeout(function() { $(".is-open").removeClass("is-open") }, 1200);
 
-/* Update quantity */
-function updateQuantity(quantityInput) {
-    /* Calculate line price */
-    var productRow = $(quantityInput).parent().parent();
-    var price = parseFloat(productRow.children('.product-price').text());
-    var quantity = $(quantityInput).val();
-    var linePrice = price * quantity;
-
-    /* Update line price display and recalc cart totals */
-    productRow.children('.product-line-price').each(function() {
-        $(this).fadeOut(fadeTime, function() {
-            $(this).text(linePrice.toFixed(2));
-            recalculateCart();
-            $(this).fadeIn(fadeTime);
-        });
+    $(".btn").click(function() {
+        check = true;
+        $(".remove").click();
     });
-}
-
-
-/* Remove item from cart */
-function removeItem(removeButton) {
-    /* Remove row from DOM and recalc cart total */
-    var productRow = $(removeButton).parent().parent();
-    productRow.slideUp(fadeTime, function() {
-        productRow.remove();
-        recalculateCart();
-    });
-}
+});
