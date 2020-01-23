@@ -68,6 +68,11 @@
         color: rgb(41, 41, 41);
     }
     
+    a {
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    
     a:hover {
         color: black;
     }

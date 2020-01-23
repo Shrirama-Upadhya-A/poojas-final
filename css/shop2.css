@@ -1096,3 +1096,8 @@ div.sku strong {
     margin-top: 10vh;
     height: 500px;
 }
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
