@@ -706,7 +706,7 @@ footer {
 
 .product-image {
     display: none;
-    width: 80%;
+    width: 90%;
     padding-right: 2vw;
 }
 
@@ -716,7 +716,7 @@ footer {
 
 .image-list {
     display: block;
-    margin-top: 10vh;
+    margin-top: 3vh;
     width: 100%;
 }
 
