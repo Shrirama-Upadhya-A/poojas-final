@@ -334,7 +334,7 @@ a {
 
 .product-quantity {
     float: left;
-    width: 15%;
+    width: 11%;
 }
 
 .product-removal {
@@ -345,7 +345,7 @@ a {
 .product-line-price {
     float: left;
     font-family: bfont;
-    width: 12%;
+    width: 15%;
     text-align: right;
 }
 
