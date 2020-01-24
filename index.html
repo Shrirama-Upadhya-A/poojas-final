@@ -43,7 +43,7 @@
                         </li>
 
                         <li>
-                            <a id = "LogIcon" href="#"> <i class="fa fa-user"></i></a>
+                            <a id="LogIcon" href="#"> <i class="fa fa-user"></i></a>
                         </li>
                         <li>
                             <a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>
@@ -469,42 +469,56 @@
             </script>
             <script>
                 var text = "UserNotLoggedIn";
-                try{
+                try {
                     var myData = localStorage['LoginData'];
                     console.log(myData);
                     localStorage.removeItem('LoginData'); // Clear the localStorage
                     text = JSON.parse(myData).text;
-                }catch(mg){
+                } catch (mg) {
                     console.log(mg);
                 }
-        console.log(text);
-            if(text == "UserLoggedIn"){
-                alert("UserLoggedIn");
-                document.getElementById("LogIcon").addEventListener('click',(e)=>{
-                    e.preventDefault();
-                    auth.onAuthStateChanged((user) => {
-                        if (user) {
-                            if (confirm("User : " + user.uid + "\nWanna SignOut??")) {
-                            auth.signOut().then(function() {
-                                    alert("Sign-out successful")
-                                    text = "UserNotLoggedIn";
-                                }).catch(function(error) {
-                                    console.log("Error happened")
-                                });
-                            } else {     
+                console.log(text);
+                if (text == "UserLoggedIn") {
+                    alert("UserLoggedIn");
+                    document.getElementById("LogIcon").addEventListener('click', (e) => {
+                        e.preventDefault();
+                        auth.onAuthStateChanged((user) => {
+                            if (user) {
+                                if (confirm("User : " + user.uid + "\nWanna SignOut??")) {
+                                    auth.signOut().then(function() {
+                                        alert("Sign-out successful")
+                                        text = "UserNotLoggedIn";
+                                    }).catch(function(error) {
+                                        console.log("Error happened")
+                                    });
+                                } else {}
+                            } else {
+                                console.log(text);
+                                // User not logged in or has just logged out.
                             }
-                        } else {
-                            console.log(text);
-                            // User not logged in or has just logged out.
-                        }
                         });
                     });
-                    
-            }
-            else{
-                document.getElementById("LogIcon").href = "../poojas-final/signup.html";
-            }
+
+                } else {
+                    document.getElementById("LogIcon").href = "../poojas-final/signup.html";
+                }
             </script>
+
+            <!--Start of Tawk.to Script-->
+            <script type="text/javascript">
+                var Tawk_API = Tawk_API || {},
+                    Tawk_LoadStart = new Date();
+                (function() {
+                    var s1 = document.createElement("script"),
+                        s0 = document.getElementsByTagName("script")[0];
+                    s1.async = true;
+                    s1.src = 'https://embed.tawk.to/5e2ac5378e78b86ed8aade13/default';
+                    s1.charset = 'UTF-8';
+                    s1.setAttribute('crossorigin', '*');
+                    s0.parentNode.insertBefore(s1, s0);
+                })();
+            </script>
+            <!--End of Tawk.to Script-->
     </body>
 </head>
 
