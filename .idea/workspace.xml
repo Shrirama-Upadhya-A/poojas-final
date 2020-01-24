@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73872cac-0df8-4a6c-96bf-1e63c17b601b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/product-retrieval.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dummy.html" beforeDir="false" afterPath="$PROJECT_DIR$/dummy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowers-special.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowers-special.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowers-subscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowers-subscription.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/product.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/product2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/shop2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/userFlowersSpecials.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/userFlowersSpecials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/userFlowersSubscriptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/userFlowersSubscriptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/puja-essentials.html" beforeDir="false" afterPath="$PROJECT_DIR$/puja-essentials.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pundits.html" beforeDir="false" afterPath="$PROJECT_DIR$/pundits.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579856582358</updated>
-      <workItem from="1579856583619" duration="7199000" />
+      <workItem from="1579856583619" duration="8013000" />
     </task>
     <servers />
   </component>
