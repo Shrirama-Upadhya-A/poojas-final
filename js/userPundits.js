@@ -10,7 +10,7 @@ fbRef.on("child_added", snap => {
     var number = snap.key;
 
 
-    document.getElementById("card1").innerHTML += `<li class="cards_item">
+    document.getElementById("card1").innerHTML += `<li class="cards_item" onclick="pundits('${number}', 'Normal')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">
@@ -40,7 +40,7 @@ fbRef.on("child_added", snap => {
     var number = snap.key;
 
 
-    document.getElementById("card2").innerHTML += `<li class="cards_item">
+    document.getElementById("card2").innerHTML += `<li class="cards_item" onclick="pundits('${number}', 'Recommended')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">
@@ -68,7 +68,7 @@ fbRef.on("child_added", snap => {
     var image = snap.child("image").val();
 // var code = snap.child("code").val();
     var number = snap.key;
-    document.getElementById("card3").innerHTML += `<li class="cards_item">
+    document.getElementById("card3").innerHTML += `<li class="cards_item" onclick="pundits('${number}', 'Anusthans')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">

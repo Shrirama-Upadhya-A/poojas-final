@@ -1,16 +1,16 @@
-// var myData = localStorage['IDData'];
-// console.log(myData);
-// localStorage.removeItem('IDData'); // Clear the localStorage
-//
-// const iddd = JSON.parse(myData).id;
-// console.log(iddd);
-// var type = JSON.parse(myData).type;
-// var mainType = JSON.parse(myData).mainType;
-// document.getElementById("productTypeName").innerHTML = mainType + " : " + type;
+var myData = localStorage['IDData'];
+console.log(myData);
+localStorage.removeItem('IDData'); // Clear the localStorage
 
-var iddd = 1;
-var type = "Anusthans";
-var mainType = "Pandits";
+const iddd = JSON.parse(myData).id;
+console.log(iddd);
+var type = JSON.parse(myData).type;
+var mainType = JSON.parse(myData).mainType;
+// document.getElementById("productTypeName").innerHTML = mainType + " : " + type;
+//
+// var iddd = 1;
+// var type = "Anusthans";
+// var mainType = "Pandits";
 
 
 

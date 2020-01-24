@@ -8,7 +8,7 @@ var fbRef = db.ref().child("Products").child("Flowers").child("Subscriptions");
     var image = snap.child("image").val();
     // var code = snap.child("code").val();
     var number = snap.key;
-    document.getElementById("card1").innerHTML +=  `<li class="cards_item">
+    document.getElementById("card1").innerHTML +=  `<li class="cards_item" onclick="flowerSubscription('${number}')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">

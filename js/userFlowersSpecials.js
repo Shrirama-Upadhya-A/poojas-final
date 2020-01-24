@@ -11,7 +11,7 @@ fbRef.on("child_added", snap => {
     console.log(name);
 
 
-    document.getElementById("card2").innerHTML +=  `<li class="cards_item">
+    document.getElementById("card2").innerHTML +=  `<li class="cards_item" onclick="flowerSpecials('${number}')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">
