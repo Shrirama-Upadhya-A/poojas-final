@@ -1,0 +1,398 @@
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.utensils {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes checkbox-hack-bugfix {
+    from {
+        padding: 0;
+    }
+    to {
+        padding: 0;
+    }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    clip: rect(0, 0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    z-index: -1;
+}
+
+input[type="checkbox"][id="test1"]:checked~.utabs .utab label[for="test1"],
+input[type="radio"][id="test1"]:checked~.utabs .utab label[for="test1"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test1"]:checked~.utabs .utab label[for="test1"]::after,
+input[type="radio"][id="test1"]:checked~.utabs .utab label[for="test1"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test1"]:checked~.panels #panel1,
+input[type="radio"][id="test1"]:checked~.panels #panel1 {
+    display: block;
+}
+
+input[type="checkbox"][id="test2"]:checked~.utabs .utab label[for="test2"],
+input[type="radio"][id="test2"]:checked~.utabs .utab label[for="test2"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test2"]:checked~.utabs .utab label[for="test2"]::after,
+input[type="radio"][id="test2"]:checked~.utabs .utab label[for="test2"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test2"]:checked~.panels #panel2,
+input[type="radio"][id="test2"]:checked~.panels #panel2 {
+    display: block;
+}
+
+input[type="checkbox"][id="test3"]:checked~.utabs .utab label[for="test3"],
+input[type="radio"][id="test3"]:checked~.utabs .utab label[for="test3"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test3"]:checked~.utabs .utab label[for="test3"]::after,
+input[type="radio"][id="test3"]:checked~.utabs .utab label[for="test3"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test3"]:checked~.panels #panel3,
+input[type="radio"][id="test3"]:checked~.panels #panel3 {
+    display: block;
+}
+
+input[type="checkbox"][id="test4"]:checked~.utabs .utab label[for="test4"],
+input[type="radio"][id="test4"]:checked~.utabs .utab label[for="test4"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test4"]:checked~.utabs .utab label[for="test4"]::after,
+input[type="radio"][id="test4"]:checked~.utabs .utab label[for="test4"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test4"]:checked~.panels #panel4,
+input[type="radio"][id="test4"]:checked~.panels #panel4 {
+    display: block;
+}
+
+.utensils-panel .utabs {
+    display: -webkit-box;
+    display: flex;
+}
+
+.utensils-panel .utabs .utab {
+    -webkit-box-flex: 1;
+    flex: 1;
+    flex-basis: auto;
+    flex-grow: 1;
+    position: relative;
+    width: 60%;
+    margin-top: 2.5rem;
+    margin-right: 0;
+    text-align: center;
+    color: #707a89;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+.utensils-panel .utabs .utab label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    height: 100%;
+    padding: 0 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+.utensils-panel .utabs .utab label .content .text {
+    margin-bottom: 1.563rem;
+    font-family: bfont;
+    font-size: 1rem;
+}
+
+.utensils-panel .utabs .utab label::after {
+    content: "";
+    position: absolute;
+    bottom: -0.188rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color: #ac0401;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.utensils-panel .utabs .tab:hover {
+    color: #ac0401;
+}
+
+.utensils-panel .separator {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 2.5rem;
+    background-color: #363e4e;
+}
+
+.utensils-panel .panels {
+    border: none;
+}
+
+.utensils-panel .panels .tab-panel {
+    display: none;
+    border: none;
+}
+
+.utensils-panel .panels .tab-panel .content {
+    font-family: bfont;
+    color: #707a89;
+    -webkit-animation: fade 0.3s linear;
+    animation: fade 0.3s linear;
+}
+
+
+/*poshak*/
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.poshaks {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes checkbox-hack-bugfix {
+    from {
+        padding: 0;
+    }
+    to {
+        padding: 0;
+    }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    clip: rect(0, 0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    z-index: -1;
+}
+
+input[type="checkbox"][id="test5"]:checked~.ptabs .ptab label[for="test5"],
+input[type="radio"][id="test5"]:checked~.ptabs .ptab label[for="test5"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test5"]:checked~.ptabs .ptab label[for="test5"]::after,
+input[type="radio"][id="test5"]:checked~.ptabs .ptab label[for="test5"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test5"]:checked~.panels2 #panel5,
+input[type="radio"][id="test5"]:checked~.panels2 #panel5 {
+    display: block;
+}
+
+input[type="checkbox"][id="test6"]:checked~.ptabs .ptab label[for="test6"],
+input[type="radio"][id="test6"]:checked~.ptabs .ptab label[for="test6"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test6"]:checked~.ptabs .ptab label[for="test6"]::after,
+input[type="radio"][id="test6"]:checked~.ptabs .ptab label[for="test6"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test6"]:checked~.panels2 #panel6,
+input[type="radio"][id="test6"]:checked~.panels2 #panel6 {
+    display: block;
+}
+
+input[type="checkbox"][id="test7"]:checked~.ptabs .ptab label[for="test7"],
+input[type="radio"][id="test7"]:checked~.ptabs .ptab label[for="test7"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test7"]:checked~.ptabs .ptab label[for="test7"]::after,
+input[type="radio"][id="test7"]:checked~.ptabs .ptab label[for="test7"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test7"]:checked~.panels2 #panel7,
+input[type="radio"][id="test7"]:checked~.panels2 #panel7 {
+    display: block;
+}
+
+input[type="checkbox"][id="test8"]:checked~.ptabs .ptab label[for="test8"],
+input[type="radio"][id="test8"]:checked~.ptabs .ptab label[for="test8"] {
+    color: #ac0401;
+    cursor: default;
+}
+
+input[type="checkbox"][id="test8"]:checked~.ptabs .ptab label[for="test8"]::after,
+input[type="radio"][id="test8"]:checked~.ptabs .ptab label[for="test8"]::after {
+    opacity: 1;
+}
+
+input[type="checkbox"][id="test8"]:checked~.panels2 #panel8,
+input[type="radio"][id="test8"]:checked~.panels2 #panel8 {
+    display: block;
+}
+
+.poshaks-panel .ptabs {
+    display: -webkit-box;
+    display: flex;
+}
+
+.poshaks-panel .ptabs .ptab {
+    -webkit-box-flex: 1;
+    flex: 1;
+    flex-basis: auto;
+    flex-grow: 1;
+    position: relative;
+    width: 60%;
+    margin-top: 2.5rem;
+    margin-right: 0;
+    text-align: center;
+    color: #707a89;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s ease;
+}
+
+.poshaks-panel .ptabs .ptab label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    height: 100%;
+    padding: 0 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+.poshaks-panel .ptabs .ptab label .content2 .text2 {
+    margin-bottom: 1.563rem;
+    font-family: bfont;
+    font-size: 1rem;
+}
+
+.poshaks-panel .ptabs .ptab label::after {
+    content: "";
+    position: absolute;
+    bottom: -0.188rem;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color: #ac0401;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.poshaks-panel .ptabs .tab2:hover {
+    color: #ac0401;
+}
+
+.poshaks-panel .separator2 {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 2.5rem;
+    background-color: #363e4e;
+}
+
+.poshaks-panel .panels2 {
+    border: none;
+}
+
+.poshaks-panel .panels2 .tab-panel2 {
+    display: none;
+    border: none;
+}
+
+.poshaks-panel .panels2 .tab-panel2 .content2 {
+    font-family: bfont;
+    color: #707a89;
+    -webkit-animation: fade 0.3s linear;
+    animation: fade 0.3s linear;
+}

@@ -40,7 +40,7 @@ fbRef.on("child_added", snap => {
     console.log(name);
 
 
-    document.getElementById("card2").innerHTML +=  `<li class="cards_item" onclick="pujaEssentials('${number}','Samagris')">
+    document.getElementById("card2").innerHTML += `<li class="cards_item" onclick="pujaEssentials('${number}','Samagris')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">
@@ -98,7 +98,7 @@ fbRef.on("child_added", snap => {
     console.log(name);
 
 
-    document.getElementById("card4").innerHTML +=  `<li class="cards_item" onclick="pujaEssentials('${number}', 'Mandirs')">
+    document.getElementById("card4").innerHTML += `<li class="cards_item" onclick="pujaEssentials('${number}', 'Mandirs')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">
@@ -127,7 +127,7 @@ fbRef.on("child_added", snap => {
     console.log(name);
 
 
-    document.getElementById("card5").innerHTML +=  `<li class="cards_item" onclick="pujaEssentials('${number}','Idols')">
+    document.getElementById("card5").innerHTML += `<li class="cards_item" onclick="pujaEssentials('${number}','Idols')">
         <div class="card">
         <div class="card_image"><img src="${image}"></div>
         <div class="card_content">
