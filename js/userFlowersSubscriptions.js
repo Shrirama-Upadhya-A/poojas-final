@@ -8,34 +8,16 @@ var fbRef = db.ref().child("Products").child("Flowers").child("Subscriptions");
     var image = snap.child("image").val();
     // var code = snap.child("code").val();
     var number = snap.key;
-    document.getElementById("grid2").innerHTML +=  `<div class="product">
-    <div class="make3D">
-        <div class="product-front">
-            <div class="shadow"></div>
-            <img src="`+image+`" alt="" />
-            <div class="image_overlay"></div>
-            <div class="add_to_cart">Add to cart</div>
-                <div class="view_details2" onClick='flowerSubscription("`+number+`")'>View Details</div>
-            
-            <div class="stats">
-                <div class="stats-container">
-                    <span class="product_price">&#8377;`+price+`</span>
-                    <span class="product_name">`+name+`</span>
-                    
+    document.getElementById("card1").innerHTML +=  `<li class="cards_item">
+        <div class="card">
+        <div class="card_image"><img src="${image}"></div>
+        <div class="card_content">
+        <h2 class="card_title">${name}
+    <br> (hindi)
+    </h2>
+    <p class="card_text">&#8377;${price}</p>
+        <button class="btn card_btn">Add To Cart</button>
 
-                </div>
-            </div>
-        </div>
-
-        <div class="product-back">
-            <div class="shadow"></div>
-            <div class="carousel">
-                <h2>hellasdfghjkljghasdfgyhuijofrdeo</h2>
-            </div>
-            <div class="flip-back">
-                <div class="cy"></div>
-                <div class="cx"></div>
-            </div>
-        </div>
     </div>
-</div> `    });
+    </div>
+    </li>`    });

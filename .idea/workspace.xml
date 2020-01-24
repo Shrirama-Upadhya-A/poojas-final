@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73872cac-0df8-4a6c-96bf-1e63c17b601b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowers-special.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowers-special.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flowers-subscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/flowers-subscription.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/userFlowersSpecials.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/userFlowersSpecials.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/userFlowersSubscriptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/userFlowersSubscriptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/userPundits.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/userPundits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/puja-essentials.html" beforeDir="false" afterPath="$PROJECT_DIR$/puja-essentials.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pundits.html" beforeDir="false" afterPath="$PROJECT_DIR$/pundits.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -47,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579856582358</updated>
-      <workItem from="1579856583619" duration="8013000" />
+      <workItem from="1579856583619" duration="10901000" />
     </task>
     <servers />
   </component>
@@ -78,5 +85,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="667" y="262" width="575" height="589" key="MultipleFileMergeDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1579858497112" />
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1579866397982">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1579866397982" />
   </component>
 </project>
