@@ -18,7 +18,7 @@ input:-webkit-autofill {
 
 .progress-bar {
     height: 4px;
-    background: #1a237e;
+    background: #ac0401;
     width: 0%;
 }
 
@@ -106,8 +106,8 @@ input:-webkit-autofill {
     top: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #1a237e;
-    background-color: #1a237e;
+    border: 2px solid #ac0401;
+    background-color: #ac0401;
     z-index: 0;
 }
 
@@ -118,18 +118,18 @@ input:-webkit-autofill {
 [type="radio"]:checked+span:after,
 [type="radio"].with-gap:checked+span:before,
 [type="radio"].with-gap:checked+span:after {
-    border: 2px solid #1a237e;
+    border: 2px solid #ac0401;
 }
 
 [type="radio"]:checked+span:after,
 [type="radio"].with-gap:checked+span:after {
-    background-color: #1a237e;
+    background-color: #ac0401;
 }
 
 [type="radio"]:checked+span:after,
 [type="radio"].with-gap:checked+span:before,
 [type="radio"].with-gap:checked+span:after {
-    border: 2px solid #1a237e;
+    border: 2px solid #ac0401;
 }
 
 .mobilepay {
