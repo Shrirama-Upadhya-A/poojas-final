@@ -32,17 +32,17 @@
                     </a>
                 </div>
                 <div class="form form-signin">
-                    <form id="test-form" action="#">
+                    <form id="signInForm" action="#">
 
                         <div class="input-group">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" oninvalid="setCustomValidity('Enter A Valid Email ID')" onchange="try{setCustomValidity('')}catch(e){}" required />
+                            <input type="email" name="email" id="signInEmail" oninvalid="setCustomValidity('Enter A Valid Email ID')" onchange="try{setCustomValidity('')}catch(e){}" required />
                         </div>
                         <br>
 
                         <div class="input-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" required />
+                            <input type="password" name="password" id="signInPassword" required />
                         </div>
 
                         <a style="float:right;padding-top:10vh;margin-right:100px;color:#ac0401;text-decoration:none;font-family:bfont;font-size:0.7em;" href="#" class="lined-link2 to-signup-link">Forgot Password?</a>
@@ -52,7 +52,7 @@
                     </form>
                 </div>
                 <div class="form form-signup">
-                    <form id="test-form" action="#">
+                    <form id="signUpForm" action="#">
                         <br>
 
                         <div class="input-group">
@@ -107,6 +107,21 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
         <script src="js/login.js"></script>
+        <script>
+        function myFunction(text="UserNotLoggedIn")
+        {
+            console.log(text);
+            var myData = {
+                    'text': text
+                };
+            localStorage.setItem('LoginData', JSON.stringify(myData));
+
+
+            window.open("../poojas-final/index.html","_top");
+            
+
+        }
+        </script>
         <script>
             // Your web app's Firebase configuration
             var firebaseConfig = {

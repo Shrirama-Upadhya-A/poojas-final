@@ -12,31 +12,31 @@ var fbRef = db.ref().child("Products").child("Flowers").child("Specials");
 
     
     document.getElementById("lol2").innerHTML += `<div class="product">
-    <div class="make3D">
-        <div class="product-front">
-            <div class="shadow"></div>
-            <img src="`+image+`" alt="" />
-            <div class="image_overlay"></div>
-            <div class="add_to_cart">Add to cart</div>
-            <div class="view_details2" onClick = 'flowerSpecials("`+number+`")'>View Details</div>
-            <div class="stats">
-                <div class="stats-container">
-                    <span class="product_price">&#8377;`+price+`</span>
-                    <span class="product_name">`+name+`</span>
+    <div class='make3D'>
+        <div class='product-front'>
+            <div class='shadow'></div>
+            <img src='`+image+`' alt='' />
+            <div class='image_overlay'></div>
+            <div class='add_to_cart'>Add to cart</div>
+            <div class='view_details2' onClick = 'flowerSpecials("`+number+`")'>View Details</div>
+            <div class='stats'>
+                <div class='stats-container'>
+                    <span class='product_price'>&#8377;`+price+`</span>
+                    <span class='product_name'>`+name+`</span>
                    
 
                 </div>
             </div>
         </div>
 
-        <div class="product-back">
-            <div class="shadow"></div>
-            <div class="carousel">
+        <div class='product-back'>
+            <div class='shadow'></div>
+            <div class='carousel'>
                 <h2>hellasdfghjkljghasdfgyhuijofrdeo</h2>
             </div>
-            <div class="flip-back">
-                <div class="cy"></div>
-                <div class="cx"></div>
+            <div class='flip-back'>
+                <div class='cy'></div>
+                <div class='cx'></div>
             </div>
         </div>
     </div>

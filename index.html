@@ -43,7 +43,7 @@
                         </li>
 
                         <li>
-                            <a href="signup.html"> <i class="fa fa-user"></i></a>
+                            <a id = "LogIcon" href="#"> <i class="fa fa-user"></i></a>
                         </li>
                         <li>
                             <a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>
@@ -466,6 +466,44 @@
                 firebase.initializeApp(firebaseConfig);
                 const auth = firebase.auth();
                 const db = firebase.database();
+            </script>
+            <script>
+                var text = "UserNotLoggedIn";
+                try{
+                    var myData = localStorage['LoginData'];
+                    console.log(myData);
+                    localStorage.removeItem('LoginData'); // Clear the localStorage
+                    text = JSON.parse(myData).text;
+                }catch(mg){
+                    console.log(mg);
+                }
+        console.log(text);
+            if(text == "UserLoggedIn"){
+                alert("UserLoggedIn");
+                document.getElementById("LogIcon").addEventListener('click',(e)=>{
+                    e.preventDefault();
+                    auth.onAuthStateChanged((user) => {
+                        if (user) {
+                            if (confirm("User : " + user.uid + "\nWanna SignOut??")) {
+                            auth.signOut().then(function() {
+                                    alert("Sign-out successful")
+                                    text = "UserNotLoggedIn";
+                                }).catch(function(error) {
+                                    console.log("Error happened")
+                                });
+                            } else {     
+                            }
+                        } else {
+                            console.log(text);
+                            // User not logged in or has just logged out.
+                        }
+                        });
+                    });
+                    
+            }
+            else{
+                document.getElementById("LogIcon").href = "../poojas-final/signup.html";
+            }
             </script>
     </body>
 </head>
