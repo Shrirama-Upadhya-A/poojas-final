@@ -20,7 +20,6 @@ fbRef.on("child_added", snap => {
     </h2>
     <p class="card_text">&#8377;${price}</p>
         <button class="btn card_btn">Add To Cart</button>
-    <button class="btn card_btn">View Details</button>
 
     </div>
     </div>

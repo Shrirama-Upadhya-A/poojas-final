@@ -25,8 +25,9 @@ h1 {
     display: block;
     width: 100%;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255);
     background: transparent;
+    font-family: bfont;
 }
 
 .btn:hover {
@@ -65,27 +66,34 @@ h1 {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+.tab-content .card {
+    border-radius: 10px;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, rgba(172, 4, 1, 0.7) 40%, rgba(172, 4, 1, 0.7) 100%);
+    background-color: #920301;
 }
 
 .card_image img {
     width: 100%;
     height: 300px;
     vertical-align: middle;
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
 }
 
 .card_image img:hover {
     width: 100%;
     height: 300px;
     vertical-align: middle;
-    -webkit-transform: scale(1.08);
-    transform: scale(1.08);
 }
 
 .card_content h2 {
