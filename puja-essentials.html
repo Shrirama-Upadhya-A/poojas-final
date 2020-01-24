@@ -400,6 +400,37 @@
         <script src="js/cart.js"></script>
 
         <script src="js/nav.js"></script>
+        <script>
+            function pujaEssentials(id, type) {
+                console.log(id);
+                var myData = {
+                    'id': id,
+                    'type': type,
+                    'mainType': "Puja Essentials"
+                };
+                localStorage.setItem('IDData', JSON.stringify(myData));
+                window.open("../product.html", "_top");
+            }
+        </script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDBTQXYYdvrSEd13Xjs5FFksrifAGnKLoY",
+                authDomain: "puja-sanskar.firebaseapp.com",
+                databaseURL: "https://puja-sanskar.firebaseio.com",
+                projectId: "puja-sanskar",
+                storageBucket: "puja-sanskar.appspot.com",
+                messagingSenderId: "713940980877",
+                appId: "1:713940980877:web:88e7f45f6ec9328753bec4",
+                measurementId: "G-SFJFNS80VC"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+            const db = firebase.database();
+        </script>
+<script src = "js/userPujaEssentials.js"></script>
 
     </body>
 

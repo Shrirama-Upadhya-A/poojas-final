@@ -93,6 +93,38 @@ if (mainType == "Pandits") {
 }
 
 
+if (mainType == "Puja Essentials") {
+    var fbRef = db.ref().child("Products").child("Puja Essentials").child(type);
+    fbRef.on("child_added", snap => {
+        console.log("ID::" + iddd + "::::" + "Snap.key ::" + snap.key);
+        if (snap.key == iddd) {
+            var name = snap.child("name").val();
+            var des = snap.child("des").val();
+            var price = snap.child("price").val();
+            var code = snap.child("code").val();
+            var image = snap.child("image").val();
 
+            document.getElementById("mainImage").innerHTML = "<img class='active' src=" + image + ">";
+            var fff = 0;
+
+            fbAddressRef = db.ref().child("Products").child("Pandits").child(type).child(iddd).child("Pics");
+            fbAddressRef.on("child_added", addressSnap => {
+
+                fff++;
+                if (fff > 1) {
+
+                    console.log(addressSnap);
+                    var image = addressSnap.child("image").val();
+                    document.getElementById("extraImages").innerHTML += "<li class='image-item'><img src=" + image + " onClick='changeImage(\""+ image +"\")'></li>";
+
+                    fff += 1;
+                }
+            });
+            document.getElementById("description").innerHTML += "<h1>" + name + "</h1><h3>&#8377;" + price + "</h3><div class='description'><p>" + des + "</p></div><button class=\"button\">Add To Cart</button>";
+
+        }
+
+    });
+}
 
 
