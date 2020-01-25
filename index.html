@@ -485,6 +485,8 @@
                     console.log(mg);
                 }
                 console.log(text);
+                goHere(text);
+                
                 if (text == "UserLoggedIn") {
                     alert("UserLoggedIn");
                     document.getElementById("LogIcon").addEventListener('click', (e) => {
@@ -501,14 +503,22 @@
                                 } else {}
                             } else {
                                 console.log(text);
+                                goHere(text);
                                 // User not logged in or has just logged out.
                             }
                         });
                     });
 
-                } else {
-                    document.getElementById("LogIcon").href = "../signup.html";
+                } 
+                function goHere(text){
+                    if(text == "UserNotLoggedIn") {
+                        document.getElementById("LogIcon").addEventListener('click', (e) => {
+                            e.preventDefault();
+                            window.open("../poojas-final/signup.html","_top");
+                        });
+                    }
                 }
+                
             </script>
 
             <!--Start of Tawk.to Script-->
